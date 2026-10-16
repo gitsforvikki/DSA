@@ -19,12 +19,10 @@ Learn core ideas, implement them in JavaScript, identify when they apply, and ex
 
 ## LeetCode practice
 
-The following are starter problems. Solve them independently before marking complete.
+- [Arrays — 30 curated interview questions (links, tags and checkboxes)](arrays.md)
+- [Strings — 30 curated interview questions (links, tags and checkboxes)](strings.md)
 
-- [ ] Remove Duplicates from Sorted Array
-- [ ] Move Zeroes
-- [ ] Best Time to Buy and Sell Stock
-- [ ] Maximum Subarray
+Solve the questions one by one. The question lists contain no solutions.
 
 ## Section revision checklist
 
