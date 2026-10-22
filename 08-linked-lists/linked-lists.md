@@ -1,6 +1,6 @@
 # Linked Lists — 30 Curated Interview Questions
 
-Solve one question at a time. **No solutions are included.** Check a box only after you have independently solved the problem. **Questions 1–7 are the problems we discussed and practiced together** (review them first); 8–20 build core skills; 21–30 are additional interview practice, including more advanced patterns.
+Solve one question at a time. **Solutions are hidden in separate files when added, so you can attempt questions first.** Check a box only after you have independently solved the problem. **Questions 1–7 are the problems we discussed and practiced together** (review them first); 8–20 build core skills; 21–30 are additional interview practice, including more advanced patterns.
 
 > **Note:** The checkboxes are deliberately unchecked; discussing or attempting a problem does not automatically mean it is fully solved. Odd/even in problem 328 refers to **positions**, not node values.
 
@@ -14,7 +14,7 @@ Solve one question at a time. **No solutions are included.** Check a box only af
 | [ ] | 6 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy |
 | [ ] | 7 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | Medium |
 | [ ] | 8 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy |
-| [ ] | 9 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy |
+| [ ] | 9 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) · [Solution + graphics](solutions/21-merge-two-sorted-lists.md) | Easy |
 | [ ] | 10 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy |
 | [ ] | 11 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Medium |
 | [ ] | 12 | [Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Easy |
