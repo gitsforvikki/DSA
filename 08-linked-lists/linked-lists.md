@@ -24,7 +24,7 @@ Solve one question at a time. **Solutions are hidden in separate files when adde
 | [ ] | 16 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium |
 | [ ] | 17 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Medium |
 | [ ] | 18 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium |
-| [ ] | 19 | [Rotate List](https://leetcode.com/problems/rotate-list/) | Medium |
+| [ ] | 19 | [Rotate List](https://leetcode.com/problems/rotate-list/) · [My solution + hints + graphics](solutions/61-rotate-list.md) | Medium |
 | [ ] | 20 | [Partition List](https://leetcode.com/problems/partition-list/) | Medium |
 | [ ] | 21 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | Medium |
 | [ ] | 22 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium |
