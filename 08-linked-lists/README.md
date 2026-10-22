@@ -17,11 +17,9 @@ Learn core ideas, implement them in JavaScript, identify when they apply, and ex
 
 ## LeetCode practice
 
-The following are starter problems. Solve them independently before marking complete.
+- [Linked Lists — 30 curated interview questions (links, tags and checkboxes)](linked-lists.md)
 
-- [ ] Reverse Linked List
-- [ ] Linked List Cycle
-- [ ] Merge Two Sorted Lists
+Questions 1–7 cover the linked-list problems discussed in practice. Work through the rest in order. The question sheet has no solutions.
 
 ## Section revision checklist
 
