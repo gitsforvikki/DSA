@@ -2,7 +2,7 @@
 
 **Week:** 15  
 **Study time:** 2 hours/day  
-**Practice progress:** 5 solved / 30 questions; 1 additional attempted (retry pending)
+**Practice progress:** 6 solved / 30 questions; 1 additional attempted (retry pending)
 
 ## Start here
 
@@ -20,6 +20,7 @@ The practice sheet includes 30 curated problems, LeetCode links, patterns, and c
 | 155 | [Min Stack — LeetCode](https://leetcode.com/problems/min-stack/) | ✅ Solved | [Both approaches, original code, fixes + graphs](./155-min-stack.md) |
 | 150 | [Evaluate Reverse Polish Notation — LeetCode](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | ✅ Solved | [My original solution + flowchart + dry run](./150-evaluate-reverse-polish-notation.md) |
 | 496 | [Next Greater Element I — LeetCode](https://leetcode.com/problems/next-greater-element-i/) | ✅ Solved | [My solution + monotonic stack diagrams + edge-case note](./496-next-greater-element-i.md) |
+| 739 | [Daily Temperatures — LeetCode](https://leetcode.com/problems/daily-temperatures/) | ✅ Solved | [My original solution + diagrams + dry run](./739-daily-temperatures.md) |
 
 **How to navigate:** Open the **Practice Sheet** above → choose a problem → click its linked saved solution; or open a solution directly from this table. The LeetCode links open the problem statement.
 
