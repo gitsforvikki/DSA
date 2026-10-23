@@ -3,8 +3,8 @@
 > JavaScript | Learn patterns, solve problems, then revise. Mark a checkbox only after solving independently.
 
 ## Progress
-- **Solved:** 4 / 30
-- **Solved:** [225. Implement Stack using Queues](./225-implement-stack-using-queues.md), [20. Valid Parentheses](./20-valid-parentheses.md), [155. Min Stack](./155-min-stack.md), [150. Evaluate Reverse Polish Notation](./150-evaluate-reverse-polish-notation.md)
+- **Solved:** 5 / 30
+- **Solved:** [225. Implement Stack using Queues](./225-implement-stack-using-queues.md), [20. Valid Parentheses](./20-valid-parentheses.md), [155. Min Stack](./155-min-stack.md), [150. Evaluate Reverse Polish Notation](./150-evaluate-reverse-polish-notation.md), [496. Next Greater Element I](./496-next-greater-element-i.md)
 - **Practiced (retry pending):** [232. Implement Queue using Stacks](./232-implement-queue-using-stacks.md)
 - Suggested order: Basics → Stack patterns → Monotonic stack → Queue / Deque.
 
@@ -45,7 +45,7 @@ flowchart LR
 
 | Done | # | Problem | Difficulty | Pattern |
 |---|---|---|---|---|
-| [ ] | 11 | [496. Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | Next greater |
+| [x] | 11 | [496. Next Greater Element I](./496-next-greater-element-i.md) ([LeetCode](https://leetcode.com/problems/next-greater-element-i/)) | Easy | Next greater |
 | [ ] | 12 | [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | Decreasing stack |
 | [ ] | 13 | [503. Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium | Circular array |
 | [ ] | 14 | [901. Online Stock Span](https://leetcode.com/problems/online-stock-span/) | Medium | Previous greater |
