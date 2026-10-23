@@ -4,7 +4,8 @@
 
 ## Progress
 - **Solved:** 1 / 30
-- **Current:** [225. Implement Stack using Queues](./225-implement-stack-using-queues.md)
+- **Solved:** [225. Implement Stack using Queues](./225-implement-stack-using-queues.md)
+- **Practiced (retry pending):** [232. Implement Queue using Stacks](./232-implement-queue-using-stacks.md)
 - Suggested order: Basics → Stack patterns → Monotonic stack → Queue / Deque.
 
 ## Mental model
@@ -30,7 +31,7 @@ flowchart LR
 | Done | # | Problem | Difficulty | Pattern |
 |---|---|---|---|---|
 | [x] | 1 | [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy | Queue rotation |
-| [ ] | 2 | [232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | Two stacks |
+| [ ] | 2 | [232. Implement Queue using Stacks](./232-implement-queue-using-stacks.md) ([LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/)) | Easy | Two stacks; retry |
 | [ ] | 3 | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | Matching brackets |
 | [ ] | 4 | [155. Min Stack](https://leetcode.com/problems/min-stack/) | Medium | Auxiliary min |
 | [ ] | 5 | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | Easy | Stack simulation |
