@@ -2,7 +2,7 @@
 
 **Week:** 15  
 **Study time:** 2 hours/day  
-**Practice progress:** 3 solved / 30 questions; 1 additional attempted (retry pending)
+**Practice progress:** 4 solved / 30 questions; 1 additional attempted (retry pending)
 
 ## Start here
 
@@ -18,6 +18,7 @@ The practice sheet includes 30 curated problems, LeetCode links, patterns, and c
 | 232 | [Implement Queue using Stacks — LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/) | 🔁 Retry pending | [Original attempt + fixed version + diagrams](./232-implement-queue-using-stacks.md) |
 | 20 | [Valid Parentheses — LeetCode](https://leetcode.com/problems/valid-parentheses/) | ✅ Solved | [Both of my solutions + dry-run graphic](./20-valid-parentheses.md) |
 | 155 | [Min Stack — LeetCode](https://leetcode.com/problems/min-stack/) | ✅ Solved | [Both approaches, original code, fixes + graphs](./155-min-stack.md) |
+| 150 | [Evaluate Reverse Polish Notation — LeetCode](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | ✅ Solved | [My original solution + flowchart + dry run](./150-evaluate-reverse-polish-notation.md) |
 
 **How to navigate:** Open the **Practice Sheet** above → choose a problem → click its linked saved solution; or open a solution directly from this table. The LeetCode links open the problem statement.
 
