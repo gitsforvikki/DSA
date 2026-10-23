@@ -3,8 +3,8 @@
 > JavaScript | Learn patterns, solve problems, then revise. Mark a checkbox only after solving independently.
 
 ## Progress
-- **Solved:** 3 / 30
-- **Solved:** [225. Implement Stack using Queues](./225-implement-stack-using-queues.md), [20. Valid Parentheses](./20-valid-parentheses.md), [155. Min Stack](./155-min-stack.md)
+- **Solved:** 4 / 30
+- **Solved:** [225. Implement Stack using Queues](./225-implement-stack-using-queues.md), [20. Valid Parentheses](./20-valid-parentheses.md), [155. Min Stack](./155-min-stack.md), [150. Evaluate Reverse Polish Notation](./150-evaluate-reverse-polish-notation.md)
 - **Practiced (retry pending):** [232. Implement Queue using Stacks](./232-implement-queue-using-stacks.md)
 - Suggested order: Basics → Stack patterns → Monotonic stack → Queue / Deque.
 
@@ -36,7 +36,7 @@ flowchart LR
 | [x] | 4 | [155. Min Stack](./155-min-stack.md) ([LeetCode](https://leetcode.com/problems/min-stack/)) | Medium | Auxiliary min / pairs |
 | [ ] | 5 | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | Easy | Stack simulation |
 | [ ] | 6 | [1047. Remove All Adjacent Duplicates in String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | Easy | Cancellation |
-| [ ] | 7 | [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium | Expression evaluation |
+| [x] | 7 | [150. Evaluate Reverse Polish Notation](./150-evaluate-reverse-polish-notation.md) ([LeetCode](https://leetcode.com/problems/evaluate-reverse-polish-notation/)) | Medium | Expression evaluation |
 | [ ] | 8 | [71. Simplify Path](https://leetcode.com/problems/simplify-path/) | Medium | Path components |
 | [ ] | 9 | [394. Decode String](https://leetcode.com/problems/decode-string/) | Medium | Nested stack |
 | [ ] | 10 | [735. Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | Medium | Simulation |
