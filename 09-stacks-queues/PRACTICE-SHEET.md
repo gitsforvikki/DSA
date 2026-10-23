@@ -3,8 +3,8 @@
 > JavaScript | Learn patterns, solve problems, then revise. Mark a checkbox only after solving independently.
 
 ## Progress
-- **Solved:** 2 / 30
-- **Solved:** [225. Implement Stack using Queues](./225-implement-stack-using-queues.md), [20. Valid Parentheses](./20-valid-parentheses.md)
+- **Solved:** 3 / 30
+- **Solved:** [225. Implement Stack using Queues](./225-implement-stack-using-queues.md), [20. Valid Parentheses](./20-valid-parentheses.md), [155. Min Stack](./155-min-stack.md)
 - **Practiced (retry pending):** [232. Implement Queue using Stacks](./232-implement-queue-using-stacks.md)
 - Suggested order: Basics → Stack patterns → Monotonic stack → Queue / Deque.
 
@@ -33,7 +33,7 @@ flowchart LR
 | [x] | 1 | [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy | Queue rotation |
 | [ ] | 2 | [232. Implement Queue using Stacks](./232-implement-queue-using-stacks.md) ([LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/)) | Easy | Two stacks; retry |
 | [x] | 3 | [20. Valid Parentheses](./20-valid-parentheses.md) ([LeetCode](https://leetcode.com/problems/valid-parentheses/)) | Easy | Matching brackets |
-| [ ] | 4 | [155. Min Stack](https://leetcode.com/problems/min-stack/) | Medium | Auxiliary min |
+| [x] | 4 | [155. Min Stack](./155-min-stack.md) ([LeetCode](https://leetcode.com/problems/min-stack/)) | Medium | Auxiliary min / pairs |
 | [ ] | 5 | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) | Easy | Stack simulation |
 | [ ] | 6 | [1047. Remove All Adjacent Duplicates in String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | Easy | Cancellation |
 | [ ] | 7 | [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium | Expression evaluation |
