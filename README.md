@@ -2,7 +2,31 @@
 
 A structured **32-week JavaScript DSA curriculum** for approximately **2 hours of study daily**. Focus on understanding patterns, deriving solutions, and re-solving missed problems — not memorizing code.
 
-> **Status:** Curriculum prepared. Lessons have **not** started. Lesson files are intentionally not written yet; lesson links below point to topic outlines, not completed lectures.
+> **Status:** Problem practice is in progress. Lesson outlines remain planned; see the dashboard for confirmed solved problems.
+
+## 📊 My DSA progress dashboard
+
+[![Solved](https://img.shields.io/badge/Solved-12-2ea44f?style=for-the-badge)](DASHBOARD.md)
+[![Retry pending](https://img.shields.io/badge/Retry-1-f59e0b?style=for-the-badge)](DASHBOARD.md#-review-queue--confirmation-needed)
+[![Saved, awaiting confirmation](https://img.shields.io/badge/Unconfirmed-2-6b7280?style=for-the-badge)](DASHBOARD.md#-review-queue--confirmation-needed)
+
+**12 confirmed solved** · **1 retry pending** · **2 additional saved solutions awaiting confirmation**
+
+### ✅ Confirmed solves by topic
+
+| Topic | Solved | Go to solutions |
+|---|---:|---|
+| Searching & Sorting | **2** | [Binary Search sheet](06-searching-sorting/README.md#saved-solutions--click-to-open) |
+| Recursion & Backtracking | **1** | [Recursion sheet](07-recursion-backtracking/SOLVED-PROBLEMS.md) |
+| Linked Lists | **1** | [Linked List sheet](08-linked-lists/linked-lists.md) |
+| Stacks & Queues | **8** | [Stack & Queue sheet](09-stacks-queues/README.md#saved-solutions--click-to-open) |
+| **Total** | **12** | **[📈 Open full dashboard](DASHBOARD.md)** |
+
+**[➡️ OPEN COMPLETE DSA PROGRESS DASHBOARD](DASHBOARD.md)**
+
+<sub>As of 24 October 2026 · Only confirmed solves documented in this repository are counted; this is not a live LeetCode account sync.</sub>
+
+---
 
 ## Study plan
 
