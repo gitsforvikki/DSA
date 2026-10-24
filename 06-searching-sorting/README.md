@@ -16,6 +16,12 @@ Learn core ideas, implement them in JavaScript, identify when they apply, and ex
 4. **Elementary Sorting** — Not started
 5. **Merge Sort and Quick Sort** — Not started
 
+## Saved solutions — click to open
+
+| # | Problem | Status | My solutions and notes |
+|---|---|---|---|
+| 69 | [Sqrt(x) — LeetCode](https://leetcode.com/problems/sqrtx/) | ✅ Solved | [My binary search solution + flowchart, dry run and complexity](./69-sqrt-x.md) |
+
 ## LeetCode practice
 
 The following are starter problems. Solve them independently before marking complete.
