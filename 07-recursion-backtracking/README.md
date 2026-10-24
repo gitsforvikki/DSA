@@ -123,6 +123,58 @@ print(5) resumes → log 5
 
 **Remember:** A recursive call pauses its caller until it finishes. Statements **before** recursion run while going down; statements **after** recursion run while returning. This example has one recursive child per call, so its recursion tree is a single chain.
 
+### 5. Count people standing in a row (recursion)
+
+**Question:** Five people are standing in a row. How can the first person find the total number of people using recursion?
+
+**Idea:** Each person counts themselves as **1** and asks the next person how many people are behind them. The last person has no one behind them.
+
+- **Base case:** No person (`null`) means `0`.
+- **Recursive step:** `1 + countPeople(nextPerson)`.
+
+```javascript
+function countPeople(person) {
+    if (person === null) return 0;
+
+    return 1 + countPeople(person.next);
+}
+
+// Example: 5 people linked in a row
+const p5 = { next: null };
+const p4 = { next: p5 };
+const p3 = { next: p4 };
+const p2 = { next: p3 };
+const p1 = { next: p2 };
+
+console.log(countPeople(p1)); // 5
+```
+
+**Calls going down:**
+
+```text
+Person 1 → 1 + count(Person 2)
+Person 2 → 1 + count(Person 3)
+Person 3 → 1 + count(Person 4)
+Person 4 → 1 + count(Person 5)
+Person 5 → 1 + count(null)
+                       └── 0 (base case)
+```
+
+**Answers coming back:**
+
+```text
+count(null)     = 0
+count(Person 5) = 1 + 0 = 1
+count(Person 4) = 1 + 1 = 2
+count(Person 3) = 1 + 2 = 3
+count(Person 2) = 1 + 3 = 4
+count(Person 1) = 1 + 4 = 5
+```
+
+**Important:** Person 1 does **not** immediately return `1`. Their `1 + countPeople(person.next)` waits for the next person's result. Each earlier call resumes as the answers return. This is the same idea as counting nodes in a linked list.
+
+**Complexity:** Time `O(N)` (visit each person once); space `O(N)` (recursive call stack).
+
 ## Lessons (topic outlines)
 
 1. **Recursion and Call Stack** — Basic practice above
