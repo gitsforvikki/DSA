@@ -1,8 +1,19 @@
 # DSA Learning Progress
 
-**Start date:** Not started  
+**Tracking updated:** 24 October 2026  
 **Study budget:** 2 hours/day  
-**Current section:** Not started
+**Current practice:** Searching & Sorting, Recursion, Linked Lists, Stacks & Queues  
+**Confirmed solved:** **12** — [View dashboard](DASHBOARD.md)
+
+## Problem-solving snapshot
+
+| Metric | Count |
+|---|---:|
+| ✅ Confirmed solved | **12** |
+| 🔁 Retry pending | **1** |
+| 🗂️ Saved solutions, not confirmed | **2** |
+
+See the [full dashboard](DASHBOARD.md) for linked solutions, section breakdowns, and counting rules. The curriculum lesson status below refers to **lesson completion**, not problem practice.
 
 ## Section tracker
 
