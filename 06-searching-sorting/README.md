@@ -21,6 +21,7 @@ Learn core ideas, implement them in JavaScript, identify when they apply, and ex
 | # | Problem | Status | My solutions and notes |
 |---|---|---|---|
 | 69 | [Sqrt(x) — LeetCode](https://leetcode.com/problems/sqrtx/) | ✅ Solved | [My binary search solution + flowchart, dry run and complexity](./69-sqrt-x.md) |
+| 374 | [Guess Number Higher or Lower — LeetCode](https://leetcode.com/problems/guess-number-higher-or-lower/) | ✅ Solved | [My original binary search solution + diagrams, dry run and optimality](./374-guess-number-higher-or-lower.md) |
 
 ## LeetCode practice
 
