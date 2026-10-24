@@ -175,6 +175,125 @@ count(Person 1) = 1 + 4 = 5
 
 **Complexity:** Time `O(N)` (visit each person once); space `O(N)` (recursive call stack).
 
+### 6. Sum of an array — three recursive solutions
+
+**Question:** Given `[1, 2, 3, 4, 5]`, return the sum (`15`) using recursion.
+
+#### Solution 1 — Remove the first element with `slice()` (my first approach)
+
+```javascript
+function sum(arr) {
+    if (arr.length == 0) return 0;
+
+    return arr[0] + sum(arr.slice(1, arr.length));
+}
+
+console.log(sum([1, 2, 3, 4, 5])); // 15
+```
+
+- **Base case:** An empty array has sum `0`.
+- **Recursive step:** Add the first element to the sum of the remaining elements.
+- `slice(1, arr.length)` creates a **new array** without the first element; it does not modify the original array.
+
+```text
+sum([1,2,3,4,5]) = 1 + sum([2,3,4,5])
+                  = 1 + 2 + sum([3,4,5])
+                  = 1 + 2 + 3 + sum([4,5])
+                  = 1 + 2 + 3 + 4 + sum([5])
+                  = 1 + 2 + 3 + 4 + 5 + sum([])
+                  = 1 + 2 + 3 + 4 + 5 + 0 = 15
+```
+
+**Complexity:** Time **O(N²)** and space **O(N²)** in the worst case: each `slice()` copies the remaining elements, and those arrays remain referenced during recursion. This solution is correct, but not the most efficient recursive version.
+
+#### Solution 2 — Start at index 0 (left to right)
+
+```javascript
+function sum(arr, index = 0) {
+    if (index == arr.length) return 0;
+
+    return arr[index] + sum(arr, index + 1);
+}
+
+let test = [1, 2, 3, 4, 5];
+let result = sum(test);
+console.log(result); // 15
+```
+
+- **Base case:** `index == arr.length` means every element has been visited, so return `0`.
+- **Recursive step:** Add `arr[index]` and move to `index + 1`.
+- No array is copied. The original array stays unchanged.
+- Also works for an empty array: `sum([])` returns `0`.
+
+```text
+sum(arr,0) → 1 + sum(arr,1)
+               2 + sum(arr,2)
+                     3 + sum(arr,3)
+                           4 + sum(arr,4)
+                                 5 + sum(arr,5)
+                                       return 0
+
+Return: 0 → 5 → 9 → 12 → 14 → 15
+```
+
+**Complexity:** Time **O(N)**; space **O(N)** for the call stack.
+
+#### Solution 3 — Start at the last index (right to left)
+
+**My original version:**
+
+```javascript
+function add(arr, lastIndex) {
+    if (lastIndex == 0) return arr[lastIndex];
+
+    return arr[lastIndex] + add(arr, lastIndex - 1);
+}
+
+let test = [1, 2, 3, 4, 5];
+console.log(add(test, test.length - 1)); // 15
+```
+
+This is **correct for non-empty arrays**. It goes through indices `4 → 3 → 2 → 1 → 0`. However, for an empty array the starting index is `-1`, so `lastIndex == 0` is never reached.
+
+**Improved version (handles empty arrays):**
+
+```javascript
+function add(arr, lastIndex = arr.length - 1) {
+    if (lastIndex < 0) return 0;
+
+    return arr[lastIndex] + add(arr, lastIndex - 1);
+}
+
+console.log(add([1, 2, 3, 4, 5])); // 15
+console.log(add([]));               // 0
+```
+
+- **Base case:** `lastIndex < 0` means no elements remain, so return `0`.
+- **Recursive step:** Add the current element and move left to `lastIndex - 1`.
+
+```text
+add(arr,4) → 5 + add(arr,3)
+               4 + add(arr,2)
+                     3 + add(arr,1)
+                           2 + add(arr,0)
+                                 1 + add(arr,-1)
+                                       return 0
+
+Return: 0 → 1 → 3 → 6 → 10 → 15
+```
+
+**Complexity:** Time **O(N)**; space **O(N)** for the call stack.
+
+#### Comparison
+
+| Solution | Direction | Time | Space | Empty array |
+| --- | --- | --- | --- | --- |
+| 1. `slice()` | First element + remaining array | O(N²) | O(N²) | Works |
+| 2. Index from `0` | Left to right | O(N) | O(N) | Works |
+| 3. Last index (improved) | Right to left | O(N) | O(N) | Works |
+
+**Takeaway:** All three approaches compute the correct sum for non-empty arrays. The two index-based versions are more efficient because they avoid copying arrays. In each approach, the addition completes while recursive calls return.
+
 ## Lessons (topic outlines)
 
 1. **Recursion and Call Stack** — Basic practice above
