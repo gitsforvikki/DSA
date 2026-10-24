@@ -4,6 +4,12 @@
 **Status:** Recursion basics practice started; remaining lessons not started  
 **Study time:** 2 hours/day
 
+## Solved LeetCode problems
+
+📋 **[Open the Recursion Solved Problems Sheet →](./SOLVED-PROBLEMS.md)**
+
+This sheet links to each problem's separate solution file.
+
 ## Learning objectives
 
 Understand recursion, the base case, call stack, and when statements run before or after a recursive call. Keep the examples small and dry-run them.
@@ -293,14 +299,6 @@ Return: 0 → 1 → 3 → 6 → 10 → 15
 | 3. Last index (improved) | Right to left | O(N) | O(N) | Works |
 
 **Takeaway:** All three approaches compute the correct sum for non-empty arrays. The two index-based versions are more efficient because they avoid copying arrays. In each approach, the addition completes while recursive calls return.
-
-## Saved LeetCode solutions — click to open
-
-| # | Problem | Status | My solutions and notes |
-|---|---|---|---|
-| 231 | [Power of Two — LeetCode](https://leetcode.com/problems/power-of-two/) | ✅ Solved | [Iterative solution first + recursive solution, dry runs and complexity](./231-power-of-two.md) |
-
-**How to navigate:** Choose a solved problem from this table to open its separate solution page, just like the Stack & Queue section.
 
 ## Lessons (topic outlines)
 
