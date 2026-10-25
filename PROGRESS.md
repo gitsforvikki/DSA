@@ -1,15 +1,15 @@
 # DSA Learning Progress
 
-**Tracking updated:** 24 October 2026  
+**Tracking updated:** 25 October 2026  
 **Study budget:** 2 hours/day  
 **Current practice:** Searching & Sorting, Recursion, Linked Lists, Stacks & Queues  
-**Confirmed solved:** **12** — [View dashboard](DASHBOARD.md)
+**Confirmed solved:** **16** — [View dashboard](DASHBOARD.md)
 
 ## Problem-solving snapshot
 
 | Metric | Count |
 |---|---:|
-| ✅ Confirmed solved | **12** |
+| ✅ Confirmed solved | **16** |
 | 🔁 Retry pending | **1** |
 | 🗂️ Saved solutions, not confirmed | **2** |
 
