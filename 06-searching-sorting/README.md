@@ -24,6 +24,7 @@ Learn core ideas, implement them in JavaScript, identify when they apply, and ex
 | 374 | [Guess Number Higher or Lower — LeetCode](https://leetcode.com/problems/guess-number-higher-or-lower/) | ✅ Solved | [My original binary search solution + diagrams, dry run and optimality](./374-guess-number-higher-or-lower.md) |
 | 278 | [First Bad Version — LeetCode](https://leetcode.com/problems/first-bad-version/) | ✅ Solved | [Three binary search solutions, comparison, dry runs and edge cases](./278-first-bad-version.md) |
 | 153 | ⭐ **[Find Minimum in Rotated Sorted Array — LeetCode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)** | ✅ Solved · **IMPORTANT** | [My two approaches: min tracking and pivot/deflection, with explanations and dry runs](./153-find-minimum-in-rotated-sorted-array.md) |
+| 34 | [Find First and Last Position — LeetCode](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | ✅ Solved | [My two approaches: neighbor checking and boundary search, with diagrams, dry runs and comparison](./34-find-first-and-last-position.md) |
 
 ## LeetCode practice
 
