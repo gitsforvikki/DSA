@@ -30,7 +30,7 @@ These bars use **one square per confirmed solved question** out of the currently
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map (practice sheet) | [📖 Notes](04-two-pointers-sliding-window/1-two-sum.md) |
 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers / Sliding Window | [📖 Notes](04-two-pointers-sliding-window/28-find-first-occurrence.md) |
 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Two Pointers | [📖 Notes](04-two-pointers-sliding-window/392-is-subsequence.md) |
-| 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Two Pointers / Linked Lists | [📖 Both approaches](04-two-pointers-sliding-window/README.md#160-intersection-of-two-linked-lists--two-solutions) |
+| 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Two Pointers / Linked Lists | [📖 Both approaches](04-two-pointers-sliding-window/160-intersection-of-two-linked-lists.md) |
 | 167 | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Two Pointers / Binary Search | [📖 Notes](04-two-pointers-sliding-window/167-two-sum-ii.md) |
 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Binary Search | [📖 Notes](06-searching-sorting/69-sqrt-x.md) |
 | 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | [📖 Notes](06-searching-sorting/374-guess-number-higher-or-lower.md) |
