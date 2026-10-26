@@ -40,7 +40,7 @@ See the [full dashboard](DASHBOARD.md) for linked solutions, section breakdowns,
 
 | Date | Problem | Pattern | Difficulty | Status | Review date | Learning note |
 |---|---|---|---|---|---|---|
-| 2026-10-26 | [Intersection of Two Linked Lists](04-two-pointers-sliding-window/README.md#160-intersection-of-two-linked-lists--two-solutions) | Two Pointers / Linked Lists | Easy | Solved independently | — | Length difference alignment and pointer switching, both O(m+n) time and O(1) space |
+| 2026-10-26 | [Intersection of Two Linked Lists](04-two-pointers-sliding-window/160-intersection-of-two-linked-lists.md) | Two Pointers / Linked Lists | Easy | Solved independently | — | Length difference alignment and pointer switching, both O(m+n) time and O(1) space |
 | 2026-10-26 | [Find First Occurrence](04-two-pointers-sliding-window/28-find-first-occurrence.md) | Two Pointers / Sliding Window | Easy | Solved independently | — | Rewind on mismatch or test each fixed-size window; both O(nm) time, O(1) space |
 | 2026-10-26 | [Is Subsequence](04-two-pointers-sliding-window/392-is-subsequence.md) | Two Pointers | Easy | Solved independently | — | Match characters in order with O(n) time and O(1) space |
 | 2026-10-26 | [Two Sum II](04-two-pointers-sliding-window/167-two-sum-ii.md) | Binary Search / Two Pointers | Medium | Solved independently | — | Sorted input enables O(n) two pointers with O(1) space |
