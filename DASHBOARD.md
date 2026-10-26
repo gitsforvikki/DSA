@@ -8,20 +8,20 @@
 
 | ✅ Confirmed solved | 🔁 Retry pending | 📁 Additional saved, not yet confirmed |
 |:---:|:---:|:---:|
-| **20** | **1** | **2** |
+| **21** | **1** | **2** |
 
 ### Solved by topic
 
 | Topic | Solved | Share of confirmed total | Visual |
 |---|---:|---:|---|
-| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 30% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 5% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 5% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 40% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **4** | 20% | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| **Total** | **20** | **100%** | |
+| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 28.6% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 4.8% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 4.8% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 38.1% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **5** | 23.8% | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| **Total** | **21** | **100%** | |
 
-These bars use **one square per confirmed solved question** out of the currently documented 20, rather than implying progress against an unknown global goal.
+These bars use **one square per confirmed solved question** out of the currently documented 21, rather than implying progress against an unknown global goal.
 
 ## ✅ All confirmed solved problems
 
@@ -30,6 +30,7 @@ These bars use **one square per confirmed solved question** out of the currently
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map (practice sheet) | [📖 Notes](04-two-pointers-sliding-window/1-two-sum.md) |
 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers / Sliding Window | [📖 Notes](04-two-pointers-sliding-window/28-find-first-occurrence.md) |
 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Two Pointers | [📖 Notes](04-two-pointers-sliding-window/392-is-subsequence.md) |
+| 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Two Pointers / Linked Lists | [📖 Both approaches](04-two-pointers-sliding-window/README.md#160-intersection-of-two-linked-lists--two-solutions) |
 | 167 | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Two Pointers / Binary Search | [📖 Notes](04-two-pointers-sliding-window/167-two-sum-ii.md) |
 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Binary Search | [📖 Notes](06-searching-sorting/69-sqrt-x.md) |
 | 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | [📖 Notes](06-searching-sorting/374-guess-number-higher-or-lower.md) |
@@ -50,7 +51,7 @@ These bars use **one square per confirmed solved question** out of the currently
 
 ## 🟠 Review queue / confirmation needed
 
-These have documentation, but they **aren't included** in the 20 confirmed solves.
+These have documentation, but they **aren't included** in the 21 confirmed solves.
 
 | # | Problem | Current record | Solution |
 |---|---|---|---|
@@ -66,6 +67,6 @@ These have documentation, but they **aren't included** in the 20 confirmed solve
 4. If an answer needs retry, keep it in the review queue — don't count it as solved.
 5. Update the **Last reconciled** date when changing totals.
 
-**Counting rule:** The 20 confirmed problems are the 6 solved entries in Section 06, 1 in Section 07, 1 checked problem in Section 08, 8 explicitly solved entries in Section 09, and 4 in the combined practice sheet (Two Sum I, Two Sum II, Is Subsequence, and Find First Occurrence). The 232 entry is marked retry pending, and the 21/61 entries have unchecked practice-sheet boxes. Other unchecked questions in the curated sheets are not counted.
+**Counting rule:** The 21 confirmed problems are the 6 solved entries in Section 06, 1 in Section 07, 1 checked problem in Section 08, 8 explicitly solved entries in Section 09, and 5 in the combined practice sheet (Two Sum I, Two Sum II, Is Subsequence, Find First Occurrence, and Intersection of Two Linked Lists). The 232 entry is marked retry pending, and the 21/61 entries have unchecked practice-sheet boxes. Other unchecked questions in the curated sheets are not counted.
 
 [← Back to main README](README.md) · [Study progress log](PROGRESS.md)
