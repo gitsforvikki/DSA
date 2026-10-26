@@ -3,13 +3,13 @@
 **Tracking updated:** 26 October 2026  
 **Study budget:** 2 hours/day  
 **Current practice:** Searching & Sorting, Recursion, Linked Lists, Stacks & Queues, Two Pointers  
-**Confirmed solved:** **19** — [View dashboard](DASHBOARD.md)
+**Confirmed solved:** **20** — [View dashboard](DASHBOARD.md)
 
 ## Problem-solving snapshot
 
 | Metric | Count |
 |---|---:|
-| ✅ Confirmed solved | **19** |
+| ✅ Confirmed solved | **20** |
 | 🔁 Retry pending | **1** |
 | 🗂️ Saved solutions, not confirmed | **2** |
 
@@ -40,6 +40,7 @@ See the [full dashboard](DASHBOARD.md) for linked solutions, section breakdowns,
 
 | Date | Problem | Pattern | Difficulty | Status | Review date | Learning note |
 |---|---|---|---|---|---|---|
+| 2026-10-26 | [Find First Occurrence](04-two-pointers-sliding-window/28-find-first-occurrence.md) | Two Pointers / Sliding Window | Easy | Solved independently | — | Rewind on mismatch or test each fixed-size window; both O(nm) time, O(1) space |
 | 2026-10-26 | [Is Subsequence](04-two-pointers-sliding-window/392-is-subsequence.md) | Two Pointers | Easy | Solved independently | — | Match characters in order with O(n) time and O(1) space |
 | 2026-10-26 | [Two Sum II](04-two-pointers-sliding-window/167-two-sum-ii.md) | Binary Search / Two Pointers | Medium | Solved independently | — | Sorted input enables O(n) two pointers with O(1) space |
 | 2026-10-26 | [Two Sum](04-two-pointers-sliding-window/1-two-sum.md) | Hash Map | Easy | Solved independently | — | Brute force and optimized Map solution; check before insert |
