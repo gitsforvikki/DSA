@@ -9,7 +9,7 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | Done | # | Question | Difficulty |
 |---|---:|---|---|
 | ✅ | 1 | [Two Sum](1-two-sum.md) | Easy |
-| ⬜ | 167 | [Two Sum II — Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium |
+| ✅ | 167 | [Two Sum II — Input Array Is Sorted](167-two-sum-ii.md) | Medium |
 | ⬜ | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy |
 | ⬜ | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Medium |
 | ⬜ | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium |
@@ -19,12 +19,13 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | ⬜ | 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium |
 | ⬜ | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium |
 
-**Progress: 1 / 10 solved.** Do not mark unchecked questions as completed.
+**Progress: 2 / 10 solved.** Do not mark unchecked questions as completed.
 
 ## Saved solutions
 
 | Problem | Approaches | Notes |
 |---|---|---|
 | [1. Two Sum](1-two-sum.md) | Brute force O(n²), optimized Hash Map O(n) | [Code, dry runs, diagram, comparison](1-two-sum.md) |
+| [167. Two Sum II](167-two-sum-ii.md) | Binary Search O(n log n), **Two Pointers O(n) — best** | [Why two pointers, both codes, dry runs, comparison](167-two-sum-ii.md) |
 
 [← Curriculum](../README.md) · [Dashboard](../DASHBOARD.md)
