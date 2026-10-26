@@ -1,15 +1,15 @@
 # DSA Learning Progress
 
-**Tracking updated:** 25 October 2026  
+**Tracking updated:** 26 October 2026  
 **Study budget:** 2 hours/day  
-**Current practice:** Searching & Sorting, Recursion, Linked Lists, Stacks & Queues  
-**Confirmed solved:** **16** — [View dashboard](DASHBOARD.md)
+**Current practice:** Searching & Sorting, Recursion, Linked Lists, Stacks & Queues, Two Sum  
+**Confirmed solved:** **17** — [View dashboard](DASHBOARD.md)
 
 ## Problem-solving snapshot
 
 | Metric | Count |
 |---|---:|
-| ✅ Confirmed solved | **16** |
+| ✅ Confirmed solved | **17** |
 | 🔁 Retry pending | **1** |
 | 🗂️ Saved solutions, not confirmed | **2** |
 
@@ -40,6 +40,7 @@ See the [full dashboard](DASHBOARD.md) for linked solutions, section breakdowns,
 
 | Date | Problem | Pattern | Difficulty | Status | Review date | Learning note |
 |---|---|---|---|---|---|---|
+| 2026-10-26 | [Two Sum](04-two-pointers-sliding-window/1-two-sum.md) | Hash Map | Easy | Solved independently | — | Brute force and optimized Map solution; check before insert |
 
 Status suggestions: Not started / Attempted / Solved with hints / Solved independently / Needs revision.
 
