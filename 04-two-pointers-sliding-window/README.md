@@ -11,6 +11,7 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | ✅ | 1 | [Two Sum](1-two-sum.md) | Easy |
 | ✅ | 167 | [Two Sum II — Input Array Is Sorted](167-two-sum-ii.md) | Medium |
 | ✅ | 392 | [Is Subsequence](392-is-subsequence.md) | Easy |
+| ✅ | 28 | [Find the Index of the First Occurrence in a String](28-find-first-occurrence.md) | Easy |
 | ⬜ | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy |
 | ⬜ | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Medium |
 | ⬜ | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium |
@@ -20,7 +21,7 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | ⬜ | 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium |
 | ⬜ | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium |
 
-**Progress: 3 / 11 solved.** Do not mark unchecked questions as completed.
+**Progress: 4 / 12 solved.** Do not mark unchecked questions as completed.
 
 ## Saved solutions
 
@@ -29,5 +30,6 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | [1. Two Sum](1-two-sum.md) | Brute force O(n²), optimized Hash Map O(n) | [Code, dry runs, diagram, comparison](1-two-sum.md) |
 | [167. Two Sum II](167-two-sum-ii.md) | Binary Search O(n log n), **Two Pointers O(n) — best** | [Why two pointers, both codes, dry runs, comparison](167-two-sum-ii.md) |
 | [392. Is Subsequence](392-is-subsequence.md) | Two Pointers O(n) time, O(1) space | [Original code, explanation, dry run, edge cases](392-is-subsequence.md) |
+| [28. Find First Occurrence](28-find-first-occurrence.md) | Two Pointers + Backtracking, **Sliding Window (readable)** | [Both codes, pointer dry run, window dry run, comparison](28-find-first-occurrence.md) |
 
 [← Curriculum](../README.md) · [Dashboard](../DASHBOARD.md)
