@@ -1,6 +1,6 @@
 # 📊 DSA Problem-Solving Dashboard
 
-> **Last reconciled:** 25 October 2026 · Based on checked-off questions and explicitly **✅ Solved** solution-index entries in this repository.
+> **Last reconciled:** 26 October 2026 · Based on checked-off questions and explicitly **✅ Solved** solution-index entries in this repository.
 >
 > The count is **not** your live LeetCode account total. Problems practiced elsewhere, but not recorded as solved here, are intentionally excluded.
 
@@ -8,24 +8,26 @@
 
 | ✅ Confirmed solved | 🔁 Retry pending | 📁 Additional saved, not yet confirmed |
 |:---:|:---:|:---:|
-| **16** | **1** | **2** |
+| **17** | **1** | **2** |
 
 ### Solved by topic
 
 | Topic | Solved | Share of confirmed total | Visual |
 |---|---:|---:|---|
-| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 38% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 35% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
 | [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 6% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 8% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 50% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
-| **Total** | **16** | **100%** | |
+| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 6% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 47% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **1** | 6% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| **Total** | **17** | **100%** | |
 
-These bars use **one square per confirmed solved question** out of the currently documented 16, rather than implying progress against an unknown global goal.
+These bars use **one square per confirmed solved question** out of the currently documented 17, rather than implying progress against an unknown global goal.
 
 ## ✅ All confirmed solved problems
 
 | # | Problem | Topic | Solution |
 |---|---|---|---|
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map (practice sheet) | [📖 Notes](04-two-pointers-sliding-window/1-two-sum.md) |
 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Binary Search | [📖 Notes](06-searching-sorting/69-sqrt-x.md) |
 | 374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search | [📖 Notes](06-searching-sorting/374-guess-number-higher-or-lower.md) |
 | 278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Binary Search | [📖 Notes](06-searching-sorting/278-first-bad-version.md) |
@@ -45,7 +47,7 @@ These bars use **one square per confirmed solved question** out of the currently
 
 ## 🟠 Review queue / confirmation needed
 
-These have documentation, but they **aren't included** in the 16 confirmed solves.
+These have documentation, but they **aren't included** in the 17 confirmed solves.
 
 | # | Problem | Current record | Solution |
 |---|---|---|---|
@@ -61,6 +63,6 @@ These have documentation, but they **aren't included** in the 16 confirmed solve
 4. If an answer needs retry, keep it in the review queue — don't count it as solved.
 5. Update the **Last reconciled** date when changing totals.
 
-**Counting rule:** The 16 confirmed problems are the 6 solved entries in Section 06, 1 in Section 07, 1 checked problem in Section 08, and 8 explicitly solved entries in Section 09. The 232 entry is marked retry pending, and the 21/61 entries have unchecked practice-sheet boxes. Other unchecked questions in the curated sheets are not counted.
+**Counting rule:** The 16 confirmed problems are the 6 solved entries in Section 06, 1 in Section 07, 1 checked problem in Section 08, 8 explicitly solved entries in Section 09, and Two Sum in the new combined practice sheet. The 232 entry is marked retry pending, and the 21/61 entries have unchecked practice-sheet boxes. Other unchecked questions in the curated sheets are not counted.
 
 [← Back to main README](README.md) · [Study progress log](PROGRESS.md)
