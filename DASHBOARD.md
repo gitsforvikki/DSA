@@ -8,26 +8,27 @@
 
 | ✅ Confirmed solved | 🔁 Retry pending | 📁 Additional saved, not yet confirmed |
 |:---:|:---:|:---:|
-| **19** | **1** | **2** |
+| **20** | **1** | **2** |
 
 ### Solved by topic
 
 | Topic | Solved | Share of confirmed total | Visual |
 |---|---:|---:|---|
-| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 32% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 30% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
 | [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 5% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
 | [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 5% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 42% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **3** | 16% | 🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| **Total** | **19** | **100%** | |
+| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 40% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **4** | 20% | 🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| **Total** | **20** | **100%** | |
 
-These bars use **one square per confirmed solved question** out of the currently documented 19, rather than implying progress against an unknown global goal.
+These bars use **one square per confirmed solved question** out of the currently documented 20, rather than implying progress against an unknown global goal.
 
 ## ✅ All confirmed solved problems
 
 | # | Problem | Topic | Solution |
 |---|---|---|---|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map (practice sheet) | [📖 Notes](04-two-pointers-sliding-window/1-two-sum.md) |
+| 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers / Sliding Window | [📖 Notes](04-two-pointers-sliding-window/28-find-first-occurrence.md) |
 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Two Pointers | [📖 Notes](04-two-pointers-sliding-window/392-is-subsequence.md) |
 | 167 | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Two Pointers / Binary Search | [📖 Notes](04-two-pointers-sliding-window/167-two-sum-ii.md) |
 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Binary Search | [📖 Notes](06-searching-sorting/69-sqrt-x.md) |
@@ -49,7 +50,7 @@ These bars use **one square per confirmed solved question** out of the currently
 
 ## 🟠 Review queue / confirmation needed
 
-These have documentation, but they **aren't included** in the 19 confirmed solves.
+These have documentation, but they **aren't included** in the 20 confirmed solves.
 
 | # | Problem | Current record | Solution |
 |---|---|---|---|
@@ -65,6 +66,6 @@ These have documentation, but they **aren't included** in the 19 confirmed solve
 4. If an answer needs retry, keep it in the review queue — don't count it as solved.
 5. Update the **Last reconciled** date when changing totals.
 
-**Counting rule:** The 19 confirmed problems are the 6 solved entries in Section 06, 1 in Section 07, 1 checked problem in Section 08, 8 explicitly solved entries in Section 09, and 3 in the combined practice sheet (Two Sum I, Two Sum II, and Is Subsequence). The 232 entry is marked retry pending, and the 21/61 entries have unchecked practice-sheet boxes. Other unchecked questions in the curated sheets are not counted.
+**Counting rule:** The 20 confirmed problems are the 6 solved entries in Section 06, 1 in Section 07, 1 checked problem in Section 08, 8 explicitly solved entries in Section 09, and 4 in the combined practice sheet (Two Sum I, Two Sum II, Is Subsequence, and Find First Occurrence). The 232 entry is marked retry pending, and the 21/61 entries have unchecked practice-sheet boxes. Other unchecked questions in the curated sheets are not counted.
 
 [← Back to main README](README.md) · [Study progress log](PROGRESS.md)
