@@ -30,6 +30,6 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | [1. Two Sum](1-two-sum.md) | Brute force O(n²), optimized Hash Map O(n) | [Code, dry runs, diagram, comparison](1-two-sum.md) |
 | [167. Two Sum II](167-two-sum-ii.md) | Binary Search O(n log n), **Two Pointers O(n) — best** | [Why two pointers, both codes, dry runs, comparison](167-two-sum-ii.md) |
 | [392. Is Subsequence](392-is-subsequence.md) | Two Pointers O(n) time, O(1) space | [Original code, explanation, dry run, edge cases](392-is-subsequence.md) |
-| [28. Find First Occurrence](28-find-first-occurrence.md) | Two Pointers + Backtracking, **Sliding Window (readable)** | [Both codes, pointer dry run, window dry run, comparison](28-find-first-occurrence.md) |
+| [28. Find First Occurrence](28-find-first-occurrence.md) | Two Pointers + Backtracking, Sliding Window, **KMP O(n+m) (optimal)** | [All 3 codes, LPS explanation, KMP dry runs, comparison](28-find-first-occurrence.md) |
 
 [← Curriculum](../README.md) · [Dashboard](../DASHBOARD.md)
