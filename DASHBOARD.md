@@ -8,20 +8,20 @@
 
 | ✅ Confirmed solved | 🔁 Retry pending | 📁 Additional saved, not yet confirmed |
 |:---:|:---:|:---:|
-| **24** | **1** | **2** |
+| **25** | **1** | **2** |
 
 ### Solved by topic
 
 | Topic | Solved | Share of confirmed total | Visual |
 |---|---:|---:|---|
-| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 25.0% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 4.2% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 4.2% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 33.3% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **8** | 33.3% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| **Total** | **24** | **100%** | |
+| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 24.0% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 4.0% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 4.0% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 32.0% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **9** | 36.0% | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| **Total** | **25** | **100%** | |
 
-These bars use **one square per confirmed solved question** out of the currently documented 24, rather than implying progress against an unknown global goal.
+These bars use **one square per confirmed solved question** out of the currently documented 25, rather than implying progress against an unknown global goal.
 
 ## ✅ All confirmed solved problems
 
@@ -30,6 +30,7 @@ These bars use **one square per confirmed solved question** out of the currently
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map (practice sheet) | [📖 Notes](04-two-pointers-sliding-window/1-two-sum.md) |
 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers / Sliding Window | [📖 Notes](04-two-pointers-sliding-window/28-find-first-occurrence.md) |
 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Two Pointers | [📖 Notes](04-two-pointers-sliding-window/392-is-subsequence.md) |
+| 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding Window / Set | [📖 Notes](04-two-pointers-sliding-window/3-longest-substring-without-repeating-characters.md) |
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Prefix/Suffix Maxima | [📖 Both approaches](04-two-pointers-sliding-window/42-trapping-rain-water.md) |
 | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Sorting / Two Pointers | [📖 Notes](04-two-pointers-sliding-window/15-3sum.md) |
 | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Two Pointers | [📖 Notes](04-two-pointers-sliding-window/11-container-with-most-water.md) |
@@ -54,7 +55,7 @@ These bars use **one square per confirmed solved question** out of the currently
 
 ## 🟠 Review queue / confirmation needed
 
-These have documentation, but they **aren't included** in the 24 confirmed solves.
+These have documentation, but they **aren't included** in the 25 confirmed solves.
 
 | # | Problem | Current record | Solution |
 |---|---|---|---|
@@ -70,6 +71,6 @@ These have documentation, but they **aren't included** in the 24 confirmed solve
 4. If an answer needs retry, keep it in the review queue — don't count it as solved.
 5. Update the **Last reconciled** date when changing totals.
 
-**Counting rule:** The 24 confirmed problems are the 6 solved entries in Section 06, 1 in Section 07, 1 checked problem in Section 08, 8 explicitly solved entries in Section 09, and 8 in the combined practice sheet (Two Sum I, Two Sum II, Is Subsequence, Find First Occurrence, Intersection of Two Linked Lists, Container With Most Water, 3Sum, and Trapping Rain Water). The 232 entry is marked retry pending, and the 21/61 entries have unchecked practice-sheet boxes. Other unchecked questions in the curated sheets are not counted.
+**Counting rule:** The 25 confirmed problems are the 6 solved entries in Section 06, 1 in Section 07, 1 checked problem in Section 08, 8 explicitly solved entries in Section 09, and 9 in the combined practice sheet (Two Sum I, Two Sum II, Is Subsequence, Find First Occurrence, Intersection of Two Linked Lists, Container With Most Water, 3Sum, Trapping Rain Water, and Longest Substring Without Repeating Characters). The 232 entry is marked retry pending, and the 21/61 entries have unchecked practice-sheet boxes. Other unchecked questions in the curated sheets are not counted.
 
 [← Back to main README](README.md) · [Study progress log](PROGRESS.md)
