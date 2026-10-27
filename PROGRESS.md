@@ -3,13 +3,13 @@
 **Tracking updated:** 27 October 2026  
 **Study budget:** 2 hours/day  
 **Current practice:** Searching & Sorting, Recursion, Linked Lists, Stacks & Queues, Two Pointers  
-**Confirmed solved:** **23** — [View dashboard](DASHBOARD.md)
+**Confirmed solved:** **24** — [View dashboard](DASHBOARD.md)
 
 ## Problem-solving snapshot
 
 | Metric | Count |
 |---|---:|
-| ✅ Confirmed solved | **23** |
+| ✅ Confirmed solved | **24** |
 | 🔁 Retry pending | **1** |
 | 🗂️ Saved solutions, not confirmed | **2** |
 
@@ -40,6 +40,7 @@ See the [full dashboard](DASHBOARD.md) for linked solutions, section breakdowns,
 
 | Date | Problem | Pattern | Difficulty | Status | Review date | Learning note |
 |---|---|---|---|---|---|---|
+| 2026-10-27 | [Trapping Rain Water](04-two-pointers-sliding-window/42-trapping-rain-water.md) | Prefix/Suffix Maxima | Hard | Solved (two approaches) | — | Fixed undeclared maxL; combined forward and backward preprocessing, O(n) time / O(n) space |
 | 2026-10-27 | [3Sum](04-two-pointers-sliding-window/15-3sum.md) | Sorting / Two Pointers | Medium | Solved independently | — | Correct duplicate skipping and pointer movement; O(n²) time |
 | 2026-10-26 | [Container With Most Water](04-two-pointers-sliding-window/11-container-with-most-water.md) | Two Pointers | Medium | Solved independently | — | Move shorter height pointer; O(n) time, O(1) space |
 | 2026-10-26 | [Intersection of Two Linked Lists](04-two-pointers-sliding-window/160-intersection-of-two-linked-lists.md) | Two Pointers / Linked Lists | Easy | Solved independently | — | Length difference alignment and pointer switching, both O(m+n) time and O(1) space |
