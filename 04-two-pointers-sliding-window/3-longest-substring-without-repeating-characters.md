@@ -2,7 +2,7 @@
 
 **LeetCode:** https://leetcode.com/problems/longest-substring-without-repeating-characters/  
 **Difficulty:** Medium  
-**Status:** Solved with guidance (final logic correct after JavaScript declaration fix)  
+**Status:** Solved with guidance; optimized Map approach added  
 **Pattern:** Variable-size sliding window + Set / Map
 
 ## Problem
@@ -11,7 +11,7 @@ Given a string `s`, find the **length** of the longest contiguous substring cont
 
 Examples: `"abcabcbb" → 3` (`"abc"`), `"bbbbb" → 1`, `"pwwkew" → 3` (`"wke"`), `"" → 0`.
 
-## User's latest original solution (preserved exactly)
+## Approach 1 — Original Set solution (preserved exactly)
 
 ```javascript
 /**
@@ -42,34 +42,6 @@ var lengthOfLongestSubstring = function(s) {
 ```
 
 **One remaining JavaScript fix:** `let i = j = 0` does not declare `j`. In strict mode this throws a ReferenceError. Replace it with `let i = 0, j = 0;`. The algorithmic logic is otherwise correct.
-
-## Corrected runnable version (only the declaration is changed)
-
-```javascript
-/**
- * @param {string} s
- * @return {number}
- */
-var lengthOfLongestSubstring = function(s) {
-    let set = new Set();
-    let maxCount = 0;
-
-    let i = 0, j = 0;
-
-    while (i < s.length) {
-        if (!set.has(s[i])) {
-            set.add(s[i]);
-            i++;
-            maxCount = Math.max(maxCount, i - j);
-        } else {
-            // Keep the Set identical to the current window.
-            set.delete(s[j]);
-            j++;
-        }
-    }
-    return maxCount;
-};
-```
 
 ## Explanation: what do i, j and Set mean?
 
@@ -168,11 +140,11 @@ Answer = **3**. Resetting the whole window would incorrectly lose `"vdf"`.
 
 ## Approach 2 — Optimized Map + Direct Jump (recommended)
 
-This is the user's **latest original code**, preserved below. It uses a Map of the last index where each character appeared. Unlike the Set approach, the Map may contain characters **outside** the current window. The condition \`slidingMap.get(s[i]) >= j\` is therefore essential.
+This is the user's **latest original code**, preserved below. It uses a Map of the last index where each character appeared. Unlike the Set approach, the Map may contain characters **outside** the current window. The condition `slidingMap.get(s[i]) >= j` is therefore essential.
 
 ### Original code
 
-\`\`\`javascript
+```javascript
 /**
  * @param {string} s
  * @return {number}
@@ -196,16 +168,16 @@ var lengthOfLongestSubstring = function(s) {
     }
     return maxCount;
 };
-\`\`\`
+```
 
 ### Core idea and invariant
 
-- \`j\` is the inclusive left boundary; \`i\` is the next character to process.
+- `j` is the inclusive left boundary; `i` is the next character to process.
 - Map stores each character's **most recently seen index**, including characters no longer in the active window.
-- If \`s[i]\` appeared **at or after \`j\`**, it duplicates a character inside the active window: move \`j\` directly to \`previousIndex + 1\`.
-- If its stored index is **less than \`j\`**, that occurrence is already outside the window; **do not move \`j\` backward**.
-- Record the current index in Map, advance \`i\`, and update \`maxCount = Math.max(maxCount, i-j)\`.
-- No \`Map.delete()\` or inner shrink loop is needed.
+- If `s[i]` appeared **at or after `j`**, it duplicates a character inside the active window: move `j` directly to `previousIndex + 1`.
+- If its stored index is **less than `j`**, that occurrence is already outside the window; **do not move `j` backward**.
+- Record the current index in Map, advance `i`, and update `maxCount = Math.max(maxCount, i-j)`.
+- No `Map.delete()` or inner shrink loop is needed.
 
 ### Dry run: "abba"
 
@@ -216,7 +188,7 @@ var lengthOfLongestSubstring = function(s) {
 | 3 | b (i=2) | 1 | 2 | "b" | 2 |
 | 4 | a (i=3) | 0 | **2** | "ba" | 2 |
 
-**Critical step:** The last \`a\` was seen at index 0, but \`j=2\`. The check \`0 >= 2\` is false, so \`j\` stays 2. Without the check, setting \`j=1\` would wrongly include a repeated \`b\`.
+**Critical step:** The last `a` was seen at index 0, but `j=2`. The check `0 >= 2` is false, so `j` stays 2. Without the check, setting `j=1` would wrongly include a repeated `b`.
 
 ### Comparison: which of the two is better?
 
@@ -236,27 +208,27 @@ Both approaches are asymptotically optimal for this problem. The Map approach av
 
 | Input | Expected |
 |---|---:|
-| \`""\` | 0 |
-| \`"a"\` | 1 |
-| \`"abc"\` | 3 |
-| \`"abba"\` | 2 |
-| \`"dvdf"\` | 3 |
-| \`"pwwkew"\` | 3 |
-| \`"tmmzuxt"\` | 5 |
-| \`"bbbbb"\` | 1 |
-| \`"abcabcbb"\` | 3 |
+| `""` | 0 |
+| `"a"` | 1 |
+| `"abc"` | 3 |
+| `"abba"` | 2 |
+| `"dvdf"` | 3 |
+| `"pwwkew"` | 3 |
+| `"tmmzuxt"` | 5 |
+| `"bbbbb"` | 1 |
+| `"abcabcbb"` | 3 |
 
 ### Complexity
 
 **Time O(n):** Exactly one iteration per character, with expected O(1) Map lookups/updates.
 
-**Space O(min(n, k)):** Map retains the last index of every distinct character encountered; at most \`n\` entries, bounded by alphabet size \`k\`.
+**Space O(min(n, k)):** Map retains the last index of every distinct character encountered; at most `n` entries, bounded by alphabet size `k`.
 
 ### Mistake-tracking improvement
 
 - Earlier Set attempt: clearing the entire window lost valid prefixes.
 - Corrected Set attempt: delete outgoing characters and retry the right pointer.
-- **Latest Map attempt:** uses last-seen indexes to jump directly; correctly guards against moving \`j\` backward.
+- **Latest Map attempt:** uses last-seen indexes to jump directly; correctly guards against moving `j` backward.
 - JavaScript declaration issue resolved: both pointers explicitly declared.
 - **Problem counted once** in the dashboard even though multiple approaches are documented.
 
