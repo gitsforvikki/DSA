@@ -22,9 +22,9 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | ✅ | 3 | [Longest Substring Without Repeating Characters](3-longest-substring-without-repeating-characters.md) | Medium |
 | ✅ | 424 | [Longest Repeating Character Replacement](424-longest-repeating-character-replacement.md) | Medium |
 | ⬜ | 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium |
-| ⬜ | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium |
+| ✅ | 567 | [Permutation in String](567-permutation-in-string.md) | Medium |
 
-**Progress: 10 / 15 solved.** Do not mark unchecked questions as completed.
+**Progress: 11 / 15 solved.** Do not mark unchecked questions as completed.
 
 ## Saved solutions
 
@@ -41,5 +41,7 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 
 | [3. Longest Substring Without Repeating Characters](3-longest-substring-without-repeating-characters.md) | Sliding Window + Set and optimized Map direct jump, O(n) time | [Original code, both approaches, dry runs, comparison](3-longest-substring-without-repeating-characters.md) |
 | [424. Longest Repeating Character Replacement](424-longest-repeating-character-replacement.md) | Sliding Window + frequency Map, historical maxFrequency, single `if`, O(n) | [Original code, algorithm, dry run, diagram, stale-max proof](424-longest-repeating-character-replacement.md) |
+
+| [567. Permutation in String](567-permutation-in-string.md) | Sorting + slice; **optimized 26-slot frequency arrays**, O(m+n) | [Both solutions, flowchart, charCodeAt, diagrams, dry run](567-permutation-in-string.md) |
 
 [← Curriculum](../README.md) · [Dashboard](../DASHBOARD.md)
