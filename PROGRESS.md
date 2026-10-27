@@ -3,13 +3,13 @@
 **Tracking updated:** 27 October 2026  
 **Study budget:** 2 hours/day  
 **Current practice:** Searching & Sorting, Recursion, Linked Lists, Stacks & Queues, Two Pointers  
-**Confirmed solved:** **25** — [View dashboard](DASHBOARD.md)
+**Confirmed solved:** **26** — [View dashboard](DASHBOARD.md)
 
 ## Problem-solving snapshot
 
 | Metric | Count |
 |---|---:|
-| ✅ Confirmed solved | **25** |
+| ✅ Confirmed solved | **26** |
 | 🔁 Retry pending | **1** |
 | 🗂️ Saved solutions, not confirmed | **2** |
 
@@ -40,6 +40,7 @@ See the [full dashboard](DASHBOARD.md) for linked solutions, section breakdowns,
 
 | Date | Problem | Pattern | Difficulty | Status | Review date | Learning note |
 |---|---|---|---|---|---|---|
+| 2026-10-27 | [Longest Repeating Character Replacement](04-two-pointers-sliding-window/424-longest-repeating-character-replacement.md) | Sliding Window / Frequency Map | Medium | Solved with guidance (final code written independently) | — | Historical maxFrequency; single if shrink; O(n) |
 | 2026-10-27 | [Longest Substring Without Repeating Characters](04-two-pointers-sliding-window/3-longest-substring-without-repeating-characters.md) | Sliding Window / Set | Medium | Solved with guidance | — | Maintains Set-window invariant and O(n) shrinking; fix undeclared j in original |
 | 2026-10-27 | [Trapping Rain Water](04-two-pointers-sliding-window/42-trapping-rain-water.md) | Prefix/Suffix Maxima | Hard | Solved (two approaches) | — | Fixed undeclared maxL; combined forward and backward preprocessing, O(n) time / O(n) space |
 | 2026-10-27 | [3Sum](04-two-pointers-sliding-window/15-3sum.md) | Sorting / Two Pointers | Medium | Solved independently | — | Correct duplicate skipping and pointer movement; O(n²) time |
