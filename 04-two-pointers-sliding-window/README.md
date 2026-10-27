@@ -14,7 +14,7 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | ✅ | 28 | [Find the Index of the First Occurrence in a String](28-find-first-occurrence.md) | Easy |
 | ✅ | 160 | [Intersection of Two Linked Lists](160-intersection-of-two-linked-lists.md) | Easy |
 | ⬜ | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy |
-| ⬜ | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Medium |
+| ✅ | 15 | [3Sum](15-3sum.md) | Medium |
 | ✅ | 11 | [Container With Most Water](11-container-with-most-water.md) | Medium |
 | ⬜ | 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy |
 | ⬜ | 643 | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) | Easy |
@@ -22,7 +22,7 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | ⬜ | 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium |
 | ⬜ | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium |
 
-**Progress: 6 / 13 solved.** Do not mark unchecked questions as completed.
+**Progress: 7 / 13 solved.** Do not mark unchecked questions as completed.
 
 ## Saved solutions
 
@@ -33,7 +33,8 @@ Practice problems in JavaScript. **No pattern hints in the question table.** Sol
 | [392. Is Subsequence](392-is-subsequence.md) | Two Pointers O(n) time, O(1) space | [Original code, explanation, dry run, edge cases](392-is-subsequence.md) |
 | [28. Find First Occurrence](28-find-first-occurrence.md) | Two Pointers + Backtracking, Sliding Window, **KMP O(n+m) (optimal)** | [All 3 codes, LPS explanation, KMP dry runs, comparison](28-find-first-occurrence.md) |
 | [160. Intersection of Two Linked Lists](160-intersection-of-two-linked-lists.md) | Length Alignment O(m+n), Pointer Switching O(m+n) | [Both original codes, diagrams, dry runs, edge cases](160-intersection-of-two-linked-lists.md) |
-
 | [11. Container With Most Water](11-container-with-most-water.md) | Two Pointers O(n) time, O(1) space | [Original code, why shorter pointer moves, diagram, dry run](11-container-with-most-water.md) |
+
+| [15. 3Sum](15-3sum.md) | Sorting + Two Pointers O(n²) | [Original code, duplicate handling, diagram, dry run, edge cases](15-3sum.md) |
 
 [← Curriculum](../README.md) · [Dashboard](../DASHBOARD.md)
