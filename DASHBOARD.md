@@ -1,6 +1,6 @@
 # 📊 DSA Problem-Solving Dashboard
 
-> **Last reconciled:** 28 October 2026 · Based on checked-off questions and explicitly **✅ Solved** solution-index entries in this repository.
+> **Last reconciled:** 31 October 2026 · Based on checked-off questions and explicitly **✅ Solved** solution-index entries in this repository.
 >
 > The count is **not** your live LeetCode account total. Problems practiced elsewhere, but not recorded as solved here, are intentionally excluded.
 
@@ -8,25 +8,27 @@
 
 | ✅ Confirmed solved | 🔁 Retry pending | 📁 Additional saved, not yet confirmed |
 |:---:|:---:|:---:|
-| **27** | **1** | **2** |
+| **28** | **1** | **2** |
 
 ### Solved by topic
 
 | Topic | Solved | Share of confirmed total | Visual |
 |---|---:|---:|---|
-| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 22.2% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 3.7% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 3.7% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 29.6% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **11** | 40.7% | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| **Total** | **27** | **100%** | |
+| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 21.4% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 3.6% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 3.6% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 28.6% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **11** | 39.3% | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Trees & BST](10-trees-bst/README.md) | **1** | 3.6% | 🟩⬜⬜⬜⬜⬜⬜⬜ |
+| **Total** | **28** | **100%** | |
 
-These bars use **one square per confirmed solved question** out of the currently documented 27, rather than implying progress against an unknown global goal.
+These bars use **one square per confirmed solved question** out of the currently documented 28, rather than implying progress against an unknown global goal.
 
 ## ✅ All confirmed solved problems
 
 | # | Problem | Topic | Solution |
 |---|---|---|---|
+| 144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Trees / Recursive DFS | [📖 Recursion call tree and dry run](10-trees-bst/144-binary-tree-preorder-traversal.md) |
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map (practice sheet) | [📖 Notes](04-two-pointers-sliding-window/1-two-sum.md) |
 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers / Sliding Window | [📖 Notes](04-two-pointers-sliding-window/28-find-first-occurrence.md) |
 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Two Pointers | [📖 Notes](04-two-pointers-sliding-window/392-is-subsequence.md) |
