@@ -7,13 +7,13 @@
 
 A **tree** is a hierarchical, connected, acyclic data structure consisting of **nodes** and **edges**. It has one **root**. Every node other than the root has **exactly one parent**; the root has **no parent**. A parent may have multiple children. For `n` nodes, a tree has `n - 1` edges.
 
-```mermaid
-flowchart TD
-  A["A (root)"] --> B["B"]
-  A --> C["C"]
-  B --> D["D (leaf)"]
-  B --> E["E (leaf)"]
-  C --> F["F (leaf)"]
+```
+          A (root)
+         /        \
+        B          C
+       / \          \
+      D   E          F
+    (leaf nodes: D, E, F)
 ```
 
 **Example:** B and C have parent A; D and E have parent B; F has parent C. A has no parent. D cannot simultaneously have parents B and C in a tree.
@@ -50,13 +50,12 @@ flowchart TD
 - **Skewed binary tree:** Nodes form a chain; height can reach n - 1.
 - **Binary Search Tree (BST):** Every node's left subtree contains smaller values and right subtree contains larger values, under a chosen duplicate policy. This rule applies to **entire subtrees**, not just immediate children.
 
-```mermaid
-flowchart TD
-  R["8"] --> L["3"]
-  R --> H["10"]
-  L --> LL["1"]
-  L --> LR["6"]
-  H --> N["14"]
+```
+          8
+         / \
+        3   10
+       / \    \
+      1   6    14
 ```
 
 ## 4. Binary Tree vs BST
@@ -117,26 +116,30 @@ For the tree `1 → (2, 3)`, preorder = `[1,2,3]`, inorder = `[2,1,3]`, postorde
 ### Corner-case diagrams
 
 **Single node**
-```mermaid
-flowchart TD
-  A["1 (root + leaf)"]
+```
+     1   <- root and leaf
 ```
 
 **Skewed tree**
-```mermaid
-flowchart TD
-  A["1"] --> B["2"]
-  B --> C["3"]
-  C --> D["4"]
+```
+      1
+       \
+        2
+         \
+          3
+           \
+            4
 ```
 
 **BST trap: immediate children look correct, but deeper descendant violates ancestor rule**
-```mermaid
-flowchart TD
-  A["10"] --> B["5"]
-  A --> C["15"]
-  C --> D["6 ❌ (less than 10)"]
-  C --> E["20"]
+```
+           10
+          /  \
+         5    15
+             /  \
+            6    20
+            ^ INVALID: 6 is in right subtree of 10,
+              but 6 < 10
 ```
 The value 6 is in the **right subtree of 10**, so the whole structure is not a valid BST.
 
