@@ -151,4 +151,123 @@ For the tree above:
 
 **Revision challenge:** Draw the stack for `[1,2,3,4,5]`. Answer: `[4,5,2,3,1]`.
 
+## 11. Solution 2 — Iterative Postorder Traversal (Two Stacks)
+
+**Status:** ✅ Solved by you · **Technique:** Two explicit stacks · **Target:** Left → Right → Root
+
+### Your original JavaScript solution
+
+```js
+var postorderTraversal = function(root) {
+    let s1 = [root];
+    let s2 = [];
+    let ans = [];
+    if(!root) return ans;
+    
+    while(s1.length){
+        let curr = s1.pop();
+        s2.push(curr);
+        if(curr.left) s1.push(curr.left);
+        if(curr.right)  s1.push(curr.right); 
+    }
+    while(s2.length){
+        ans.push(s2.pop().val)
+    }
+    return ans;
+};
+```
+
+### Main idea — reverse Root → Right → Left
+
+We need **Left → Right → Root**. Reversing **Root → Right → Left** gives exactly the required postorder.
+
+- **`s1`** is the processing stack. Pop a node, put it in `s2`, then push its **left** child first and **right** child second.
+- Since `s1` is **LIFO**, the right child is processed before the left child. Thus nodes enter `s2` in **Root → Right → Left** order.
+- **`s2`** reverses that order when popped, yielding **Left → Right → Root**.
+- Your `if(!root) return ans;` safely handles an empty tree before either loop.
+
+### Visualize both stacks
+
+```text
+           1
+          / \
+         2   3
+        / \
+       4   5
+
+First iteration:
+  s1 starts [1] → pop 1 → push 1 into s2
+  push left 2 into s1; push right 3 into s1
+
+  s1 (bottom → top): [2, 3]
+  s2 (bottom → top): [1]
+
+  Next s1.pop() gives 3, because right was pushed last.
+
+After the first loop:
+  s2 (bottom → top): [1, 3, 2, 5, 4]
+
+Pop all of s2:
+  4 → 5 → 2 → 3 → 1
+
+Final postorder = [4, 5, 2, 3, 1]
+```
+
+### Complete dry run — processing `s1`
+
+Stack contents are shown **bottom → top**; the rightmost element is the next to pop.
+
+| Step | Pop from `s1` | Push children into `s1` | `s1` after step | `s2` after step |
+|---:|---|---|---|---|
+| Start | — | Root already in `s1` | `[1]` | `[]` |
+| 1 | 1 | Left 2, then right 3 | `[2,3]` | `[1]` |
+| 2 | 3 | No children | `[2]` | `[1,3]` |
+| 3 | 2 | Left 4, then right 5 | `[4,5]` | `[1,3,2]` |
+| 4 | 5 | No children | `[4]` | `[1,3,2,5]` |
+| 5 | 4 | No children | `[]` | `[1,3,2,5,4]` |
+
+Now `s1` is empty. Pop everything from `s2`:
+
+| `s2.pop().val` | Answer |
+|---|---|
+| 4 | `[4]` |
+| 5 | `[4,5]` |
+| 2 | `[4,5,2]` |
+| 3 | `[4,5,2,3]` |
+| 1 | `[4,5,2,3,1]` |
+
+### Why left-first push is correct here (unlike iterative preorder)
+
+| Algorithm | Child push order | Resulting processing order |
+|---|---|---|
+| Iterative **preorder** (one stack) | Right, then Left | Root → Left → Right |
+| Iterative **postorder** (two stacks, first pass) | **Left, then Right** | Root → Right → Left |
+| Pop second stack | — | **Left → Right → Root** |
+
+If you push **right before left** in this two-stack algorithm, the final result becomes **Right → Left → Root**, which is not standard postorder.
+
+### Complexity comparison
+
+| Metric | Solution 1: Recursive | Solution 2: Two stacks |
+|---|---|---|
+| Time | O(n) | O(n) |
+| Auxiliary space | O(h) call stack | **O(n)** total for `s1` and `s2` |
+| Output array | O(n) | O(n) |
+| Deep recursion overflow | Possible | Avoided |
+
+The second stack `s2` stores **every node** before producing the answer, so its space is O(n) even for a balanced tree. Here `h` is the tree height in nodes.
+
+### Corner cases and common mistakes
+
+- **Empty root:** Returns `[]`. Your code initializes `s1 = [root]` first, but the early return ensures null is never popped or dereferenced.
+- **Single node:** `s1 = [root]`, then `s2 = [root]`, then output `[root.val]`.
+- **Only left or only right children:** Both work; `s2` reverses the root-first processing order.
+- **Duplicate or zero values:** Values are preserved because node references, not values, are stored in both stacks.
+- **Do not forget the second `while(s2.length)` loop:** Without it, `ans` stays empty.
+- **Do not reverse the child push order accidentally:** The LIFO reversal is the entire trick.
+
+**Dashboard note:** This is Solution 2 for an already solved LeetCode 145 problem; it does **not** increase the unique solved count.
+
+---
+
 [← Trees & BST](README.md)
