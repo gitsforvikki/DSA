@@ -67,10 +67,10 @@ A **binary tree** is a rooted tree in which every node has **at most two childre
 - A node can have **0, 1, or 2** children; never 3.
 - The root has no parent; every other node has exactly one parent.
 - Each left/right child is itself the root of a subtree.
-- An empty tree (\`root === null\`) is valid.
+- An empty tree (`root === null`) is valid.
 - Binary tree does **not** mean binary search tree.
 
-\`\`\`text
+```text
            10
           /  \
         25    3
@@ -78,57 +78,57 @@ A **binary tree** is a rooted tree in which every node has **at most two childre
       7          18
 
 Valid binary tree: 25 > 10 is allowed on the left.
-\`\`\`
+```
 
 ### 4.2 Left child vs right child matters
 
-\`\`\`text
+```text
 Tree A             Tree B
    1                  1
   /                    \
  2                      2
-\`\`\`
+```
 
-These are **different** binary trees, even though both contain 1 and 2. A missing child must remain \`null\`, not be silently moved to the other side.
+These are **different** binary trees, even though both contain 1 and 2. A missing child must remain `null`, not be silently moved to the other side.
 
 ### 4.3 Types of binary trees — compare carefully
 
 **Full (strict/proper):** Each node has either **0 or 2** children; never exactly 1.
 
-\`\`\`text
+```text
         1
        / \
       2   3
          / \
         4   5
-\`\`\`
+```
 
 **Perfect:** All internal nodes have 2 children **and** all leaves are at the same depth.
 
-\`\`\`text
+```text
         1
        / \
       2   3
      / \ / \
     4  5 6  7
-\`\`\`
+```
 
 **Complete:** All levels except possibly the last are full; nodes on the last level are packed **left to right**.
 
-\`\`\`text
+```text
 Complete              NOT complete
       1                     1
      / \                   / \
     2   3                 2   3
    / \                   /   /
   4   5                 4   5
-\`\`\`
+```
 
 **Balanced:** The height stays small relative to the node count. In an **AVL-style height-balanced** tree, each node's left/right subtree heights differ by at most 1. Different balancing schemes use different definitions.
 
 **Skewed / degenerate:** Every node has only one child, producing a chain.
 
-\`\`\`text
+```text
     1
      \
       2
@@ -136,7 +136,7 @@ Complete              NOT complete
         3
          \
           4
-\`\`\`
+```
 
 **Important relationships:** Perfect implies full and complete. Complete does **not** imply full; full does **not** imply complete. A perfect tree is balanced.
 
@@ -144,48 +144,48 @@ Complete              NOT complete
 
 | Property | Formula / explanation |
 |---|---|
-| Max nodes at depth \`d\` | \`2^d\` |
-| Max nodes with height \`h\` | \`2^(h+1) - 1\` |
-| Minimum height for \`n >= 1\` nodes | \`ceil(log2(n + 1)) - 1\` |
-| Maximum height for \`n >= 1\` nodes | \`n - 1\` (skewed) |
-| Edges for \`n >= 1\` nodes | \`n - 1\` |
-| Perfect tree node count | \`2^(h+1) - 1\` |
-| Perfect tree leaf count | \`2^h\` |
-| Full binary tree | \`leaves = nodesWithTwoChildren + 1\` for nonempty trees |
+| Max nodes at depth `d` | `2^d` |
+| Max nodes with height `h` | `2^(h+1) - 1` |
+| Minimum height for `n >= 1` nodes | `ceil(log2(n + 1)) - 1` |
+| Maximum height for `n >= 1` nodes | `n - 1` (skewed) |
+| Edges for `n >= 1` nodes | `n - 1` |
+| Perfect tree node count | `2^(h+1) - 1` |
+| Perfect tree leaf count | `2^h` |
+| Full binary tree | `leaves = nodesWithTwoChildren + 1` for nonempty trees |
 
-Example: height \`2\` allows at most \`2^3 - 1 = 7\` nodes. **Height and depth are not interchangeable:** depth measures distance *from root*, height measures longest distance *to a leaf*.
+Example: height `2` allows at most `2^3 - 1 = 7` nodes. **Height and depth are not interchangeable:** depth measures distance *from root*, height measures longest distance *to a leaf*.
 
 ### 4.5 Array representation vs linked-node representation
 
-**Linked nodes** use \`{ val, left, right }\`, ideal for arbitrary shapes and LeetCode recursion.
+**Linked nodes** use `{ val, left, right }`, ideal for arbitrary shapes and LeetCode recursion.
 
 For a **complete binary tree** in a **zero-indexed array**:
-- Parent of index \`i > 0\`: \`Math.floor((i - 1) / 2)\`
-- Left child index: \`2 * i + 1\`
-- Right child index: \`2 * i + 2\`
+- Parent of index `i > 0`: `Math.floor((i - 1) / 2)`
+- Left child index: `2 * i + 1`
+- Right child index: `2 * i + 2`
 
-For sparse trees, LeetCode's level-order arrays use \`null\` placeholders; do **not** assume a trimmed level-order array always obeys the complete-tree index formulas.
+For sparse trees, LeetCode's level-order arrays use `null` placeholders; do **not** assume a trimmed level-order array always obeys the complete-tree index formulas.
 
 ### 4.6 Tree traversal, with dry run
 
-\`\`\`text
+```text
         1
        / \
       2   3
      / \
     4   5
-\`\`\`
+```
 
 | Traversal | Order | Result |
 |---|---|---|
-| Preorder DFS | Root → Left → Right | \`1,2,4,5,3\` |
-| Inorder DFS | Left → Root → Right | \`4,2,5,1,3\` |
-| Postorder DFS | Left → Right → Root | \`4,5,2,3,1\` |
-| Level-order BFS | Top to bottom, left to right | \`1,2,3,4,5\` |
+| Preorder DFS | Root → Left → Right | `1,2,4,5,3` |
+| Inorder DFS | Left → Root → Right | `4,2,5,1,3` |
+| Postorder DFS | Left → Right → Root | `4,5,2,3,1` |
+| Level-order BFS | Top to bottom, left to right | `1,2,3,4,5` |
 
 **Preorder dry run:** visit 1 → enter left subtree at 2 → visit 4 → backtrack → visit 5 → backtrack to 1 → visit 3.
 
-\`\`\`js
+```js
 function preorder(root, result = []) {
   if (root === null) return result;
   result.push(root.val);
@@ -228,19 +228,19 @@ function levelOrder(root) {
   }
   return levels;
 }
-\`\`\`
+```
 
-All four traversals visit each node: **O(n) time**. Recursive DFS uses **O(h) auxiliary call-stack space** (plus output); BFS uses **O(w)** queue space where \`w\` is the maximum width (the array-with-head implementation may retain processed entries, so its allocated queue array can reach O(n)).
+All four traversals visit each node: **O(n) time**. Recursive DFS uses **O(h) auxiliary call-stack space** (plus output); BFS uses **O(w)** queue space where `w` is the maximum width (the array-with-head implementation may retain processed entries, so its allocated queue array can reach O(n)).
 
 ### 4.7 Binary tree common interview mistakes
 
 - Assuming left value < root < right for every binary tree (only BSTs have ordering).
-- Forgetting \`if (root === null)\` in recursive functions.
+- Forgetting `if (root === null)` in recursive functions.
 - Confusing node count with edge count for height/diameter.
 - Assuming the tree is balanced, so recursion depth is O(log n).
 - Comparing node values instead of node references when values repeat.
-- Accidentally losing a subtree while rewiring \`left\` or \`right\`.
-- Treating \`0\` or negative values as absent: check \`node !== null\`, not \`if (node.val)\`.
+- Accidentally losing a subtree while rewiring `left` or `right`.
+- Treating `0` or negative values as absent: check `node !== null`, not `if (node.val)`.
 
 ## 5. Binary Search Tree (BST) — Detailed Guide
 
@@ -251,7 +251,7 @@ A **BST** is a binary tree with an ordering invariant. With **unique keys**:
 - Every value in the **right subtree** is **strictly greater**.
 - **Both subtrees** must also be valid BSTs.
 
-\`\`\`text
+```text
            8
           / \
          3   10
@@ -259,13 +259,13 @@ A **BST** is a binary tree with an ordering invariant. With **unique keys**:
        1   6    14
           / \   /
          4   7 13
-\`\`\`
+```
 
 Example: 4 < 6 < 8, and 13 > 8 even though 13 is the **left child of 14**. Ordering is relative to **all relevant ancestors**, not just the immediate parent.
 
 **Invalid example:**
 
-\`\`\`text
+```text
           10
          /  \
         5    15
@@ -273,18 +273,18 @@ Example: 4 < 6 < 8, and 13 > 8 even though 13 is the **left child of 14**. Order
            6    20
 
 6 < 10 but is in the right subtree of 10 → INVALID.
-\`\`\`
+```
 
 ### 5.2 BST search — how we eliminate half a direction
 
-To find \`7\` in the BST above:
+To find `7` in the BST above:
 
-1. At 8: \`7 < 8\` → go **left** to 3.
-2. At 3: \`7 > 3\` → go **right** to 6.
-3. At 6: \`7 > 6\` → go **right** to 7.
-4. Found! If the next child were \`null\`, the key would be absent.
+1. At 8: `7 < 8` → go **left** to 3.
+2. At 3: `7 > 3` → go **right** to 6.
+3. At 6: `7 > 6` → go **right** to 7.
+4. Found! If the next child were `null`, the key would be absent.
 
-\`\`\`js
+```js
 function searchBST(root, target) {
   let curr = root;
   while (curr !== null) {
@@ -293,15 +293,15 @@ function searchBST(root, target) {
   }
   return null;
 }
-\`\`\`
+```
 
 **Time:** O(h) = O(log n) for height-balanced BSTs, O(n) for skewed trees. **Extra space:** O(1) iterative.
 
 ### 5.3 BST insertion — example and implementation
 
-Insert \`5\` into:
+Insert `5` into:
 
-\`\`\`text
+```text
 Before:                After:
        8                    8
       / \                  / \
@@ -310,11 +310,11 @@ Before:                After:
        6                    6
                            /
                           5
-\`\`\`
+```
 
 Follow comparisons: 5 < 8 → left to 3; 5 > 3 → right to 6; 5 < 6 → left is null → attach new node.
 
-\`\`\`js
+```js
 function insertIntoBST(root, val) {
   if (root === null) return new TreeNode(val);
   let curr = root;
@@ -335,17 +335,17 @@ function insertIntoBST(root, val) {
     }
   }
 }
-\`\`\`
+```
 
 **Time:** O(h); **extra space:** O(1) iterative. Note this implementation **mutates** the tree and **ignores duplicates**.
 
 ### 5.4 BST deletion — three essential cases
 
-1. **Leaf node:** Remove it by setting the parent's link to \`null\`.
+1. **Leaf node:** Remove it by setting the parent's link to `null`.
 2. **One child:** Replace the deleted node with its only child.
 3. **Two children:** Replace its value with its **inorder successor** (smallest key in right subtree), then delete that successor; alternatively use the inorder predecessor.
 
-\`\`\`text
+```text
 Delete 8 (two children):
 
        8                    10
@@ -355,9 +355,9 @@ Delete 8 (two children):
           12
 
 Inorder successor of 8 = 10.
-\`\`\`
+```
 
-\`\`\`js
+```js
 function deleteNode(root, key) {
   if (root === null) return null;
   if (key < root.val) {
@@ -374,15 +374,15 @@ function deleteNode(root, key) {
   }
   return root;
 }
-\`\`\`
+```
 
 **Time:** O(h); **recursive stack:** O(h). This changes the tree in place. Duplicate policy must be specified for variants allowing duplicates.
 
 ### 5.5 BST validation — the important ancestor-bound trap
 
-Checking only \`root.left.val < root.val < root.right.val\` is **not enough**. Each descendant must respect constraints from **every ancestor**.
+Checking only `root.left.val < root.val < root.right.val` is **not enough**. Each descendant must respect constraints from **every ancestor**.
 
-\`\`\`js
+```js
 function isValidBST(root) {
   function validate(node, min, max) {
     if (node === null) return true;
@@ -392,7 +392,7 @@ function isValidBST(root) {
   }
   return validate(root, -Infinity, Infinity);
 }
-\`\`\`
+```
 
 The bounds here assume **finite, distinct numeric keys**. If keys may include infinities or duplicates, adapt the comparison and bound representation. **Time:** O(n); **stack:** O(h).
 
@@ -400,14 +400,14 @@ The bounds here assume **finite, distinct numeric keys**. If keys may include in
 
 For each node, inorder visits **all smaller left-subtree values**, then the node, then **all greater right-subtree values**. Therefore a BST with unique keys produces a **strictly increasing** inorder sequence.
 
-For the BST in 5.1: \`[1,3,4,6,7,8,10,13,14]\`.
+For the BST in 5.1: `[1,3,4,6,7,8,10,13,14]`.
 
 This helps with **kth smallest**, **range queries**, and **BST validation**.
 
 ### 5.7 Minimum, maximum, predecessor, successor
 
-- **Minimum:** Follow \`left\` until \`null\`.
-- **Maximum:** Follow \`right\` until \`null\`.
+- **Minimum:** Follow `left` until `null`.
+- **Maximum:** Follow `right` until `null`.
 - **Inorder predecessor:** Largest smaller key.
 - **Inorder successor:** Smallest greater key.
 - If a node has a right subtree, its successor is the minimum of that right subtree. Otherwise walk up ancestors until reaching an ancestor from its left subtree (if parent links exist).
@@ -423,9 +423,9 @@ This helps with **kth smallest**, **range queries**, and **BST validation**.
 | Full traversal | O(n) | O(n) |
 | Validate BST | O(n) | O(n) |
 
-A regular BST does **not** automatically rebalance. Inserting sorted values \`1,2,3,4,5\` into an initially empty ordinary BST yields a chain:
+A regular BST does **not** automatically rebalance. Inserting sorted values `1,2,3,4,5` into an initially empty ordinary BST yields a chain:
 
-\`\`\`text
+```text
 1
  \
   2
@@ -435,16 +435,16 @@ A regular BST does **not** automatically rebalance. Inserting sorted values \`1,
       4
        \
         5
-\`\`\`
+```
 
 That is why AVL trees and red-black trees maintain balance using additional rules and rotations.
 
 ### 5.9 BST corner cases
 
-- **Empty tree:** search returns \`null\`; insert creates root; delete returns \`null\`; validate returns \`true\`.
+- **Empty tree:** search returns `null`; insert creates root; delete returns `null`; validate returns `true`.
 - **One node:** delete the root → empty tree.
 - **Delete root with 0, 1, or 2 children:** caller must use the **returned root**.
-- **Missing key:** search returns \`null\`; deletion leaves tree unchanged.
+- **Missing key:** search returns `null`; deletion leaves tree unchanged.
 - **Duplicates:** decide whether to reject, count, or consistently place them; strict validator above rejects duplicates.
 - **Deep ancestor violation:** validate against inherited bounds.
 - **Sorted insertion:** skewed tree and O(n) operations.
