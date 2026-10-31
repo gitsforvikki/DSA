@@ -139,4 +139,113 @@ For any non-null node, the function (1) recursively processes **all** nodes in i
 
 **Revision task:** Dry-run `[4,2,6,1,3,5,7]` and predict inorder without executing code. Answer: `[1,2,3,4,5,6,7]`.
 
+## 11. Solution 2 — Iterative Inorder Traversal (Explicit Stack)
+
+**Status:** ✅ Solved by you · **Order:** Left → Root → Right
+
+### Your original JavaScript code
+
+```js
+var inorderTraversal = function(root) {
+    let stack =[];
+    let ans = [];
+    if(!root) return ans;
+
+    let curr = root;
+    while( stack.length || curr){
+
+        //this while loop push all the left most nodes in stack
+        while(curr){
+            stack.push(curr);
+            curr = curr.left;
+        }
+        curr = stack.pop();
+        ans.push(curr.val);
+        curr = curr.right;
+
+    }
+    return ans;
+};
+```
+
+### Why are there two while loops?
+
+- **Outer `while (stack.length || curr)`:** Continue while a node is available to explore **or** an ancestor is waiting on the stack. Both must be empty/null before traversal finishes.
+- **Inner `while (curr)`:** Keep going to the **leftmost** node, pushing each ancestor onto the stack. Nothing is appended yet because inorder must visit the left subtree first.
+- **`curr = stack.pop()`:** Retrieve the next node whose left subtree is finished.
+- **`ans.push(curr.val)`:** Visit that node (the **Root** part of Left → Root → Right).
+- **`curr = curr.right`:** Explore the right subtree next. On the following iteration, the inner loop again descends left within that right subtree.
+
+### Visual: how the explicit stack replaces recursion
+
+```text
+           1
+          / \
+         2   3
+        / \
+       4   5
+
+Start: curr = 1, stack = []
+
+Descend LEFT:
+  push 1 → stack [1]       curr = 2
+  push 2 → stack [1,2]     curr = 4
+  push 4 → stack [1,2,4]   curr = null
+
+Now pop 4, visit 4.       ans = [4]
+4.right = null, so pop 2, visit 2.
+Then curr = 2.right = 5, push 5, pop 5.
+Next pop 1, visit 1; then go right to 3.
+
+Final inorder = [4,2,5,1,3]
+```
+
+**Stack is shown bottom → top; the rightmost entry is popped first.**
+
+### Complete dry run
+
+| Step | Action | Stack after action | `curr` next | `ans` |
+|---:|---|---|---|---|
+| 1 | Push 1, 2, 4 while moving left | `[1,2,4]` | `null` | `[]` |
+| 2 | Pop and visit 4 | `[1,2]` | `null` | `[4]` |
+| 3 | Pop and visit 2 | `[1]` | `5` | `[4,2]` |
+| 4 | Push 5 while moving left | `[1,5]` | `null` | `[4,2]` |
+| 5 | Pop and visit 5 | `[1]` | `null` | `[4,2,5]` |
+| 6 | Pop and visit 1 | `[]` | `3` | `[4,2,5,1]` |
+| 7 | Push 3 while moving left | `[3]` | `null` | `[4,2,5,1]` |
+| 8 | Pop and visit 3 | `[]` | `null` | `[4,2,5,1,3]` |
+| 9 | Outer loop ends: no `curr` and empty stack | `[]` | `null` | `[4,2,5,1,3]` |
+
+### Why `stack.length || curr` (OR), not AND?
+
+Consider when `curr === null` after reaching the leftmost node, but the stack contains `[1,2,4]`. We **must continue** to pop and visit those nodes. Using `&&` would stop too early.
+
+Conversely, after popping a node, its `right` child may be non-null even when the stack is empty. We must continue exploring that subtree.
+
+### Complexity comparison
+
+| Metric | Solution 1: Recursive | Solution 2: Iterative |
+|---|---|---|
+| Time | O(n) | O(n) |
+| Auxiliary space | O(h) call stack | O(h) explicit stack |
+| Worst-case space | O(n) skewed tree | O(n) skewed tree |
+| Output | O(n) | O(n) |
+| Deep recursion overflow | Possible | Avoided |
+
+Here `h` is the tree height in nodes.
+
+### Corner cases and interview pitfalls
+
+- **Empty tree:** `if(!root) return ans;` returns `[]` safely. The outer loop alone would also handle null root.
+- **Single node:** Push, pop, visit; returns `[root.val]`.
+- **Only left children:** Push all nodes; pop in reverse depth order.
+- **Only right children:** Each node is visited, then `curr` moves right.
+- **Duplicates and zero values:** All node values are included.
+- **Do not append values inside the inner while loop:** That would visit nodes before their left subtree and break inorder.
+- **Do not forget `curr = curr.right`:** Otherwise right subtrees are skipped.
+
+**Important:** This is a second approach to the same LeetCode 94 problem; the dashboard solved-problem count does **not** increase.
+
+---
+
 [← Trees & BST learning sheet](README.md)
