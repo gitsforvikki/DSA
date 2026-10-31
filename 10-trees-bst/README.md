@@ -1,6 +1,6 @@
 # 🌳 Trees & Binary Search Trees — Learning Sheet
 
-> **Status:** Fundamentals started · **Solved problems:** 0 (no unverified solves counted)  
+> **Status:** Fundamentals started · **Solved problems:** 1 (Preorder Traversal, independently solved)  
 > [← DSA Home](../README.md) · [Progress dashboard](../DASHBOARD.md)
 
 ## 1. Introduction: What is a Tree?
@@ -574,7 +574,13 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 6. Lowest Common Ancestor
 7. Practice and revision
 
-## 11. Practice Tracker — Not Yet Solved
+## 11. Saved solutions — click to open
+
+| # | Problem | Status | Explanation |
+|---|---|---|---|
+| 144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | ✅ Solved | [Your code + recursion call tree, null returns, call stack and dry run](144-binary-tree-preorder-traversal.md) |
+
+## 12. Practice Tracker — Not Yet Solved
 
 - [ ] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [ ] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
