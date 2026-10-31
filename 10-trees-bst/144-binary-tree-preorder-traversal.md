@@ -170,4 +170,107 @@ At D:
 
 **Practice prompt:** Draw the call tree and track `ans` for `[1,null,2,3]`. Expected preorder: `[1,2,3]`.
 
+## 10. Solution 2 — Iterative Preorder Traversal (Stack)
+
+**Status:** ✅ Corrected and solved by you · **Pattern:** Explicit stack + LIFO  
+**Traversal order:** Root → Left → Right
+
+### Your original iterative JavaScript solution
+
+```js
+var preorderTraversal = function(root) {
+  //Iterative approach
+  let ans = [];
+  let stack = [];
+  if(!root) return ans;
+
+  stack.push(root);
+  while(stack.length){
+    let curr = stack.pop();
+    ans.push(curr.val);
+    if(curr.right) stack.push(curr.right);
+    if(curr.left) stack.push(curr.left);
+
+  }  
+  return ans;
+};
+```
+
+### Why do we push the right child before the left child?
+
+A stack follows **LIFO — Last In, First Out**. We want **Root → Left → Right**, so after visiting the root, push **right first** and **left second**. The left child is now on top of the stack and will be popped first.
+
+```text
+           1
+          / \
+         2   3
+        / \
+       4   5
+
+After visiting 1:
+      TOP
+      ┌───┐
+      │ 2 │ ← pushed last, popped first
+      ├───┤
+      │ 3 │ ← pushed first, processed later
+      └───┘
+    BOTTOM
+
+Visit order: 1 → 2 → 4 → 5 → 3
+```
+
+### Detailed iterative dry run
+
+The stack is shown **bottom → top** (rightmost item is popped next).
+
+| Iteration | Pop | Action | Stack after pushes | Answer |
+|---:|---|---|---|---|
+| Start | — | Push root 1 | `[1]` | `[]` |
+| 1 | 1 | Add 1; push 3, then 2 | `[3, 2]` | `[1]` |
+| 2 | 2 | Add 2; push 5, then 4 | `[3, 5, 4]` | `[1,2]` |
+| 3 | 4 | Add 4; no children | `[3, 5]` | `[1,2,4]` |
+| 4 | 5 | Add 5; no children | `[3]` | `[1,2,4,5]` |
+| 5 | 3 | Add 3; no children | `[]` | `[1,2,4,5,3]` |
+
+**Final output:** `[1,2,4,5,3]`.
+
+### Step-by-step algorithm
+
+1. Create `ans = []` and `stack = []`.
+2. **If `root` is null, return `[]` immediately.** This avoids reading `curr.right` from a null node.
+3. Push `root` onto the stack.
+4. While the stack is not empty: pop the top node, add its value to `ans`, push its **right child**, then its **left child** (if present).
+5. When the stack is empty, every node has been processed; return `ans`.
+
+### Complexity — iterative vs recursive
+
+| Metric | Recursive DFS (Solution 1) | Iterative stack (Solution 2) |
+|---|---|---|
+| Time | O(n) | O(n) |
+| Auxiliary space | O(h) call stack | O(h) explicit stack for binary-tree preorder |
+| Worst case | O(n) | O(n) |
+| Output array | O(n) | O(n) |
+| Deep recursion overflow | Possible | Avoided |
+
+Here `h` is tree height in nodes. For this iterative preorder algorithm, the stack holds at most O(h) pending nodes because each level contributes at most one unvisited sibling while following a path.
+
+### Corner cases
+
+| Input | Result | Why |
+|---|---|---|
+| `root = null` | `[]` | Early return before `stack.push(root)` |
+| Single node `[1]` | `[1]` | Pop once; no children to push |
+| Only left children | Root-to-leaf order | Only left nodes are pushed |
+| Only right children | Root-to-leaf order | Only right nodes are pushed |
+| Node value `0` | Includes 0 | Checks child node references, not child values |
+| Duplicate values | Keeps duplicates | Visits nodes, not unique values |
+
+### Interview mistakes to remember
+
+- **Do not push left before right** for this stack-based preorder: that would pop right first and break the traversal order.
+- **Do not push a null root** and then read `curr.right` / `curr.left` without checking; your early `if(!root) return ans;` fixes this.
+- This is **another approach to the same LeetCode 144 problem**, not a new solved problem for the dashboard.
+
+---
+
 [← Back to Trees & BST](README.md)
