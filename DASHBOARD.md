@@ -8,26 +8,27 @@
 
 | ✅ Confirmed solved | 🔁 Retry pending | 📁 Additional saved, not yet confirmed |
 |:---:|:---:|:---:|
-| **28** | **1** | **2** |
+| **29** | **1** | **2** |
 
 ### Solved by topic
 
 | Topic | Solved | Share of confirmed total | Visual |
 |---|---:|---:|---|
-| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 21.4% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 3.6% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 3.6% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 28.6% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **11** | 39.3% | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
-| [Trees & BST](10-trees-bst/README.md) | **1** | 3.6% | 🟩⬜⬜⬜⬜⬜⬜⬜ |
-| **Total** | **28** | **100%** | |
+| [Searching & Sorting](06-searching-sorting/README.md) | **6** | 20.7% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Recursion & Backtracking](07-recursion-backtracking/SOLVED-PROBLEMS.md) | **1** | 3.4% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Linked Lists](08-linked-lists/linked-lists.md) | **1** | 3.4% | 🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Stacks & Queues](09-stacks-queues/README.md) | **8** | 27.6% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Two Pointers & Sliding Window practice](04-two-pointers-sliding-window/README.md) | **11** | 37.9% | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Trees & BST](10-trees-bst/README.md) | **2** | 6.9% | 🟩🟩⬜⬜⬜⬜⬜⬜ |
+| **Total** | **29** | **100%** | |
 
-These bars use **one square per confirmed solved question** out of the currently documented 28, rather than implying progress against an unknown global goal.
+These bars use **one square per confirmed solved question** out of the currently documented 29, rather than implying progress against an unknown global goal.
 
 ## ✅ All confirmed solved problems
 
 | # | Problem | Topic | Solution |
 |---|---|---|---|
+| 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Trees / Recursive DFS | [📖 Call stack and dry run](10-trees-bst/94-binary-tree-inorder-traversal.md) |
 | 144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Trees / Recursive DFS | [📖 Recursion call tree and dry run](10-trees-bst/144-binary-tree-preorder-traversal.md) |
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map (practice sheet) | [📖 Notes](04-two-pointers-sliding-window/1-two-sum.md) |
 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers / Sliding Window | [📖 Notes](04-two-pointers-sliding-window/28-find-first-occurrence.md) |
