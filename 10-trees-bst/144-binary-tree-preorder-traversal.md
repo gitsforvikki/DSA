@@ -11,7 +11,7 @@ Your solution uses an outer answer array and a nested recursive helper. We prese
 
 ## 2. Your JavaScript solution
 
-\`\`\`js
+```js
 var preorderTraversal = function(root) {
     let ans = [];
     var treeTraversal = function(curr){
@@ -24,15 +24,15 @@ var preorderTraversal = function(root) {
 
     return ans;
 };
-\`\`\`
+```
 
-**Why this works:** Every non-null node is appended **before** exploring its left and right children. The recursive calls visit the entire left subtree before the right subtree. \`if (!curr) return;\` stops recursion at missing children.
+**Why this works:** Every non-null node is appended **before** exploring its left and right children. The recursive calls visit the entire left subtree before the right subtree. `if (!curr) return;` stops recursion at missing children.
 
 ## 3. Tree used in the visual explanation
 
 The same node layout as your reference screenshot:
 
-\`\`\`text
+```text
                  A
                /   \
               B     C
@@ -40,7 +40,7 @@ The same node layout as your reference screenshot:
             D     E   F
                    \
                     G
-\`\`\`
+```
 
 Expected result: **[A, B, D, C, E, G, F]**
 
@@ -50,7 +50,7 @@ Expected result: **[A, B, D, C, E, G, F]**
 
 The following uses a **text diagram**, not Mermaid, so GitHub can display it even when rich diagram rendering fails.
 
-\`\`\`text
+```text
 treeTraversal(A)
 │
 ├─ push A                              ans = [A]
@@ -83,13 +83,13 @@ treeTraversal(A)
 ↳ return from A
 
 preorderTraversal returns ans
-\`\`\`
+```
 
 ### Key observation: **recursion pauses and resumes**
 
-When execution reaches \`treeTraversal(curr.left)\`, the current function **pauses** at that line. After the left recursive call **returns**, the current function **resumes at the next line**, \`treeTraversal(curr.right)\`. It does not start from the top again.
+When execution reaches `treeTraversal(curr.left)`, the current function **pauses** at that line. After the left recursive call **returns**, the current function **resumes at the next line**, `treeTraversal(curr.right)`. It does not start from the top again.
 
-\`\`\`text
+```text
 Inside treeTraversal(B):
 
 ans.push(B)
@@ -100,7 +100,7 @@ treeTraversal(B.left)   ───> treeTraversal(D)
                          <─── D finished
 treeTraversal(B.right)  ───> null → return
                          <─── B finished; resume A's right call
-\`\`\`
+```
 
 This is why **D is processed before C**, and **G before F**.
 
@@ -127,7 +127,7 @@ This is why **D is processed before C**, and **G before F**.
 
 **Going down (calls):** New function frames are pushed onto the stack.
 
-\`\`\`text
+```text
 At D:
 ┌──────────────────┐
 │ treeTraversal(D) │  ← currently executing
@@ -136,38 +136,38 @@ At D:
 ├──────────────────┤
 │ treeTraversal(A) │  ← paused at its left call
 └──────────────────┘
-\`\`\`
+```
 
 **Coming back (returns):** D's null children return, then D finishes; B resumes and explores its right child. After B finishes, A resumes and explores C.
 
-**Important:** The \`ans\` array is **shared** by every call because the nested function closes over the outer variable. There is **one answer array**, not a new array per recursive call.
+**Important:** The `ans` array is **shared** by every call because the nested function closes over the outer variable. There is **one answer array**, not a new array per recursive call.
 
 ## 7. Base case and corner cases
 
 | Input | Output | Why |
 |---|---|---|
-| \`root = null\` | \`[]\` | Helper returns immediately |
-| One node \`[1]\` | \`[1]\` | Push once; both children null |
-| Only left chain \`1 → 2 → 3\` | \`[1,2,3]\` | Visit before descending |
-| Only right chain \`1 → 2 → 3\` | \`[1,2,3]\` | Left null, then right |
+| `root = null` | `[]` | Helper returns immediately |
+| One node `[1]` | `[1]` | Push once; both children null |
+| Only left chain `1 → 2 → 3` | `[1,2,3]` | Visit before descending |
+| Only right chain `1 → 2 → 3` | `[1,2,3]` | Left null, then right |
 | Repeated values | All occurrences included | Nodes visited, not deduplicated |
-| Node value \`0\` | Includes \`0\` | \`!curr\` checks the node reference, not its value |
+| Node value `0` | Includes `0` | `!curr` checks the node reference, not its value |
 
 ## 8. Complexity
 
 - **Time: O(n)** — each real node is visited exactly once.
-- **Auxiliary space: O(h)** — recursion call stack, where \`h\` is tree height in nodes.
+- **Auxiliary space: O(h)** — recursion call stack, where `h` is tree height in nodes.
 - **Worst-case auxiliary space: O(n)** for a skewed tree.
-- **Output space: O(n)** for \`ans\` (separate from auxiliary stack).
+- **Output space: O(n)** for `ans` (separate from auxiliary stack).
 
 ## 9. Interview notes and mistakes to avoid
 
 1. **Preorder = Root, Left, Right**. Changing push position changes the traversal: between calls = inorder; after calls = postorder.
-2. \`return\` from a null call returns **only that recursive invocation**, not the whole algorithm.
+2. `return` from a null call returns **only that recursive invocation**, not the whole algorithm.
 3. After a left call completes, execution resumes at the **right call of the same parent frame**.
-4. \`ans\` is shared via closure; no need to return arrays from every helper invocation.
+4. `ans` is shared via closure; no need to return arrays from every helper invocation.
 5. The empty-tree check is essential. A very deep tree may overflow JavaScript's recursion stack; an iterative stack-based traversal is an alternative.
 
-**Practice prompt:** Draw the call tree and track \`ans\` for \`[1,null,2,3]\`. Expected preorder: \`[1,2,3]\`.
+**Practice prompt:** Draw the call tree and track `ans` for `[1,null,2,3]`. Expected preorder: `[1,2,3]`.
 
 [← Back to Trees & BST](README.md)
