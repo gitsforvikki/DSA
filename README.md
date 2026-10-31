@@ -38,6 +38,7 @@ A structured **32-week JavaScript DSA curriculum** for approximately **2 hours o
 
 ## Additional practice sheets
 
+- [🌳 Trees & BST — introduction, terminology, diagrams, corner cases and practice tracker](10-trees-bst/README.md)
 - [Two Pointers & Sliding Window — solved problems and practice](04-two-pointers-sliding-window/README.md)
 
 ## Clickable curriculum
