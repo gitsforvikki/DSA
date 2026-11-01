@@ -1,8 +1,8 @@
-# 102. Binary Tree Level Order Traversal (BFS)
+# 102. Binary Tree Level Order Traversal — BFS and DFS
 
 [← Trees & BST sheet](README.md) · [LeetCode 102](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
-**Difficulty:** Medium · **Pattern:** BFS / Queue · **Status:** User-provided working solution
+**Difficulty:** Medium · **Patterns:** BFS (queue), DFS (recursion + depth index) · **Status:** Three user-provided solutions saved
 
 ## Problem
 
@@ -108,7 +108,7 @@ flowchart TD
 - **Auxiliary queue + current-level array:** O(w), where `w` is maximum tree width.
 - **Output:** O(n) additional storage.
 
-## Approach 2 — Efficient queue with head index
+## Optimization of Approach 1 — Efficient queue with head index
 
 Same **remaining-nodes counter** logic, but avoid costly `shift()`.
 
@@ -145,6 +145,119 @@ Here the number of **unprocessed** nodes is `q.length - head`, not `q.length`, b
 
 **Time:** O(n). **Auxiliary allocated queue array:** O(n) (processed entries are retained). **Output:** O(n).
 
+## Approach 2 — Your standard BFS: fixed queue size + for loop (recommended iterative)
+
+```js
+var levelOrder = function(root) {
+  let ans = [];
+  let q = [root];
+  if(!root) return ans;
+
+  while(q.length){
+    let levelArr = [];
+    let qSize = q.length;
+    for(let i = 0; i < qSize; i++){
+        let curr = q.shift();
+        levelArr.push(curr.val);
+        curr.left && q.push(curr.left);
+        curr.right && q.push(curr.right);
+    }
+    ans.push(levelArr);
+  }
+  return ans;
+};
+```
+
+### Why this works
+
+- **Outer while loop** handles one level per iteration.
+- **`qSize = q.length`** snapshots the number of nodes in the current level.
+- **Inner for loop** processes exactly `qSize` nodes, even though pushing children changes the queue's actual length.
+- Left child is enqueued before right child, preserving left-to-right order.
+- After the for loop, `levelArr` is complete and the queue contains only nodes of the next level.
+
+### Level-by-level dry run
+
+| While iteration | `qSize` | Nodes processed | Queue after loop | Appended level |
+|---|---:|---|---|---|
+| 1 | 1 | 3 | [9,20] | [3] |
+| 2 | 2 | 9,20 | [15,7] | [9,20] |
+| 3 | 2 | 15,7 | [] | [15,7] |
+
+```text
+Level 0:       3           → [3]
+              / \
+Level 1:     9   20        → [9,20]
+                 / \
+Level 2:        15  7      → [15,7]
+```
+
+**Complexity:** O(n) BFS operations; JavaScript `shift()` can make the implementation O(n²) worst-case. Auxiliary queue O(w), output O(n).
+
+## Approach 3 — Your recursive DFS with level index
+
+```js
+var levelOrder = function(root) {
+    if(!root) return [];
+    let ans = [];
+    //Recursive approach
+    var traversal = function(curr , level){
+        if(!curr) return;
+        if(!ans[level]) ans[level] = [];
+        ans[level].push(curr.val);
+         traversal(curr.left , level + 1);
+         traversal(curr.right, level + 1);
+    }
+    traversal(root , 0);
+    return ans;
+};
+```
+
+### Why DFS still produces level-order groups
+
+This performs **preorder DFS** (node → left → right), not BFS. However, it writes each value into `ans[level]`, so nodes at the same depth are grouped. Visiting the left subtree before the right ensures the correct left-to-right ordering **within each level**.
+
+### Recursive visit trace
+
+```text
+traversal(3, 0)  → ans[0] = [3]
+  traversal(9, 1)  → ans[1] = [9]
+  traversal(20, 1) → ans[1] = [9,20]
+    traversal(15, 2) → ans[2] = [15]
+    traversal(7, 2)  → ans[2] = [15,7]
+
+DFS visit order: 3, 9, 20, 15, 7
+Level-order output: [[3],[9,20],[15,7]]
+```
+
+For a more branched tree, DFS visit order can differ significantly from BFS order, but `ans[level]` still groups values correctly.
+
+### Recursive call flowchart
+
+```mermaid
+flowchart TD
+  A[traversal node, level] --> B{node null?}
+  B -- Yes --> C[Return]
+  B -- No --> D[Create ans level if missing]
+  D --> E[Push node value into ans level]
+  E --> F[Recurse left with level + 1]
+  F --> G[Recurse right with level + 1]
+  G --> H[Return to caller]
+```
+
+**Complexity:** O(n) time, O(h) auxiliary recursion stack, O(n) output. On a highly skewed tree, recursion depth may reach n and can cause stack overflow.
+
+## Comparison — which approach should you use?
+
+| Approach | Technique | Time in this JS code | Auxiliary space | Interview use |
+|---|---|---|---|---|
+| 1: Remaining-level counter | BFS + queue | O(n²) worst-case with `shift()` | O(w) | Valid alternative |
+| 2: Fixed `qSize` + for loop | BFS + queue | O(n²) worst-case with `shift()` | O(w) | **Preferred iterative approach** |
+| 3: DFS + level index | Recursive preorder DFS | O(n) | O(h) | Clean recursive alternative |
+| Head-index optimization | BFS + queue index | O(n) | O(n) allocated queue | Avoids `shift()` overhead |
+
+**Important:** The first three are your own approaches. The head-index implementation is a performance optimization, not counted as a fourth original approach.
+
 ## Corner cases
 
 | Tree | Result |
@@ -157,4 +270,4 @@ Here the number of **unprocessed** nodes is `q.length - head`, not `q.length`, b
 | Duplicate values | Preserve all node occurrences |
 | Negative and zero values | Preserve values normally |
 
-**Interview note:** DFS goes depth-first (preorder/inorder/postorder). This problem requires **BFS**, visiting one complete level before the next.
+**Interview note:** Level-order **output** does not require a BFS **implementation**. BFS is the natural traversal, but DFS + depth indexing also produces the required nested level arrays.
