@@ -582,6 +582,7 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 | 145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | ✅ Solved | [Your code + recursion flow, stack diagram and dry run](145-binary-tree-postorder-traversal.md) |
 | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 📝 Solution saved | [Your BFS queue + level-counter solution, diagrams, dry run, complexity](102-binary-tree-level-order-traversal.md) |
 | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 📝 Two approaches saved | [Top-down + bottom-up DFS, recursive call tree, return-value tree, dry runs](104-maximum-depth-of-binary-tree.md) |
+| 112 | [Path Sum](https://leetcode.com/problems/path-sum/) | 📝 Four approaches saved | [Running sum, explicit booleans, shared state, remaining target; recursion trees and return flows](112-path-sum.md) |
 | 144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | ✅ Solved | [Your code + recursion call tree, null returns, call stack and dry run](144-binary-tree-preorder-traversal.md) |
 
 ## 12. Practice Tracker — Not Yet Solved
