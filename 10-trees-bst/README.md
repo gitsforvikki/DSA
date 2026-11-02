@@ -578,6 +578,7 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 
 | # | Problem | Status | Explanation |
 |---|---|---|---|
+| 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | ✅ Solved | [Your BFS queue + direction flag, level dry run, diagram, flowchart and corner cases](103-binary-tree-zigzag-level-order-traversal.md) |
 | 543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | ✅ Solution saved | [Your bottom-up DFS, height vs diameter, recursion tree, dry run, corner cases](543-diameter-of-binary-tree.md) |
 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | ✅ Solution saved | [Your bottom-up DFS + shared boolean, recursion return flow, dry run, flowchart, complexity](110-balanced-binary-tree.md) |
 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | ✅ Two approaches saved | [Your recursive DFS + iterative BFS, return flow, queue dry run, diagrams and corner cases](100-same-tree.md) |
