@@ -578,6 +578,7 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 
 | # | Problem | Status | Explanation |
 |---|---|---|---|
+| 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | ⭐ **IMPORTANT — Solved** | [Your bottom-up DFS + subtree counts, local count vs returned values, call stack, diagrams, flowchart and corner cases](236-lowest-common-ancestor-of-a-binary-tree.md) |
 | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | ✅ Solved | [Your BFS queue + direction flag, level dry run, diagram, flowchart and corner cases](103-binary-tree-zigzag-level-order-traversal.md) |
 | 543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | ✅ Solution saved | [Your bottom-up DFS, height vs diameter, recursion tree, dry run, corner cases](543-diameter-of-binary-tree.md) |
 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | ✅ Solution saved | [Your bottom-up DFS + shared boolean, recursion return flow, dry run, flowchart, complexity](110-balanced-binary-tree.md) |
@@ -594,6 +595,5 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 
 - [ ] [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 - [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
-- [ ] [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 > Add each personally solved problem with approach, dry run, diagram, complexity, and mistakes; update the dashboard only after confirming the solve.
