@@ -578,6 +578,7 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 
 | # | Problem | Status | Explanation |
 |---|---|---|---|
+| 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | ✅ Two approaches saved | [Your recursive DFS + iterative BFS, return flow, queue dry run, diagrams and corner cases](100-same-tree.md) |
 | 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | ✅ Solved | [Your code + recursive call tree, stack diagram and dry run](94-binary-tree-inorder-traversal.md) |
 | 145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | ✅ Solved | [Your code + recursion flow, stack diagram and dry run](145-binary-tree-postorder-traversal.md) |
 | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 📝 Solution saved | [Your BFS queue + level-counter solution, diagrams, dry run, complexity](102-binary-tree-level-order-traversal.md) |
@@ -588,7 +589,6 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 
 ## 12. Practice Tracker — Not Yet Solved
 
-- [ ] [Same Tree](https://leetcode.com/problems/same-tree/)
 - [ ] [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 - [ ] [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 - [ ] [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
