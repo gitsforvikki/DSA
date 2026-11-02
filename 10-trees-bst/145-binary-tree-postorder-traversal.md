@@ -268,6 +268,126 @@ The second stack `s2` stores **every node** before producing the answer, so its 
 
 **Dashboard note:** This is Solution 2 for an already solved LeetCode 145 problem; it does **not** increase the unique solved count.
 
+
+## 12. Solution 3 — Iterative Postorder Traversal (One Stack + lastVisited)
+
+**Status:** Solved by you. **Goal:** Left → Right → Root using a single explicit stack.
+
+### Your JavaScript solution
+
+```javascript
+var postorderTraversal = function(root) {
+    let ans = [];
+    if (!root) return ans;
+
+    let stack = [];
+    let curr = root;
+    let lastVisited = null;
+
+    while (stack.length || curr) {
+        // Push the current node and all of its left descendants.
+        while (curr) {
+            stack.push(curr);
+            curr = curr.left;
+        }
+
+        // Look at the top without removing it: parent must wait for right.
+        let peekNode = stack[stack.length - 1];
+
+        if (peekNode.right && lastVisited !== peekNode.right) {
+            // Right subtree has not finished; descend into it.
+            curr = peekNode.right;
+        } else {
+            // Both subtrees are complete: now visit the parent.
+            ans.push(peekNode.val);
+            lastVisited = stack.pop();
+        }
+    }
+    return ans;
+};
+```
+
+Only formatting/comments and strict reference inequality `!==` were added to your working solution.
+
+### Tree and expected order
+
+```text
+        1
+       / \
+      2   3
+     / \
+    4   5
+
+Left → Right → Root = [4, 5, 2, 3, 1]
+```
+
+### Detailed dry run
+
+The stack is shown bottom → top.
+
+| Step | Action | Stack after action | lastVisited | Answer |
+|---:|---|---|---|---|
+| 1 | Descend left: push 1, 2, 4 | [1,2,4] | null | [] |
+| 2 | Node 4 has no right: pop 4 | [1,2] | 4 | [4] |
+| 3 | Node 2 right is 5, not visited: set curr=5 | [1,2] | 4 | [4] |
+| 4 | Push 5; no right: pop 5 | [1,2] | 5 | [4,5] |
+| 5 | Node 2 right equals lastVisited: pop 2 | [1] | 2 | [4,5,2] |
+| 6 | Node 1 right is 3, not visited: set curr=3 | [1] | 2 | [4,5,2] |
+| 7 | Push 3; no right: pop 3 | [1] | 3 | [4,5,2,3] |
+| 8 | Node 1 right equals lastVisited: pop 1 | [] | 1 | [4,5,2,3,1] |
+
+### Why lastVisited is needed
+
+Postorder processes the parent **only after** both children are finished. After returning from the right subtree, the parent is still on the stack. Without `lastVisited`, the algorithm would descend into the same right subtree again.
+
+```text
+At node 2:
+  pop 4 -> lastVisited = 4
+  2.right = 5; 5 !== 4 -> visit right
+  pop 5 -> lastVisited = 5
+  2.right = 5; 5 === 5 -> right finished -> pop 2
+```
+
+Compare **node references**, not `.val`, because different nodes can have equal values.
+
+### Decision flow
+
+```mermaid
+flowchart TD
+  A[Start curr=root and empty stack] --> B{curr exists?}
+  B -- Yes --> C[Push curr and move left]
+  C --> B
+  B -- No --> D{Stack empty?}
+  D -- Yes --> Z[Return answer]
+  D -- No --> E[Peek top node]
+  E --> F{Right exists and not lastVisited?}
+  F -- Yes --> G[Set curr to right child]
+  G --> B
+  F -- No --> H[Append value and pop as lastVisited]
+  H --> B
+```
+
+### Complexity and comparison
+
+| Approach | Time | Auxiliary space |
+|---|---|---|
+| 1. Recursive DFS | O(n) | O(h) call stack |
+| 2. Iterative two stacks | O(n) | O(n) |
+| **3. Iterative one stack + lastVisited** | **O(n)** | **O(h)** |
+
+`h` is tree height: O(log n) for balanced trees, O(n) for skewed trees. The output array uses O(n) separately.
+
+### Corner cases
+
+- Empty tree: `[]`.
+- Single node: node value once.
+- Only left or only right children: works.
+- Duplicate values: compare node references with `!==`, not values.
+- Missing right child: process the node as soon as its left subtree finishes.
+- Right subtree already processed: `lastVisited` prevents a repeated visit.
+
+**Interview takeaway:** Inorder can visit a node immediately after the left subtree; postorder must wait for the right subtree too, which is why the one-stack method tracks the last completed node.
+
 ---
 
 [← Trees & BST](README.md)
