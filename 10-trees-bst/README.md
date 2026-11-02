@@ -578,6 +578,7 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 
 | # | Problem | Status | Explanation |
 |---|---|---|---|
+| 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | ✅ Solved | [Your BFS level-size solution, tree diagram, queue dry run, flowchart, corner cases and left-vs-right comparison](199-binary-tree-right-side-view.md) |
 | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | ⭐ **IMPORTANT — Solved** | [Your bottom-up DFS + subtree counts, local count vs returned values, call stack, diagrams, flowchart and corner cases](236-lowest-common-ancestor-of-a-binary-tree.md) |
 | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | ✅ Solved | [Your BFS queue + direction flag, level dry run, diagram, flowchart and corner cases](103-binary-tree-zigzag-level-order-traversal.md) |
 | 543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | ✅ Solution saved | [Your bottom-up DFS, height vs diameter, recursion tree, dry run, corner cases](543-diameter-of-binary-tree.md) |
