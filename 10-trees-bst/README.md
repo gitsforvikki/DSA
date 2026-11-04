@@ -574,6 +574,12 @@ Both visit each node once: **O(n) time**; recursion stack **O(h)**, where h is t
 6. Lowest Common Ancestor
 7. Practice and revision
 
+## ⭐ Revision: Common Tree & BST Mistakes
+
+**[📘 8 Common Mistakes, Fixes & Corner Cases — Detailed Revision Sheet](tree-common-mistakes-and-fixes.md)**
+
+Includes buggy vs corrected JavaScript, why each bug happens, recursive call-flow dry runs, corner cases, and a 12-point pre-submit checklist. **This is a revision resource, not a solved problem.**
+
 ## 11. Saved solutions — click to open
 
 | # | Problem | Status | Explanation |
