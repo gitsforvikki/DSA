@@ -159,3 +159,38 @@ flowchart TD
 3. Postorder processing ensures deepest qualifying node is found before ancestors.
 4. `!lpa` prevents overwriting the first valid LCA.
 5. Contrast with Diameter of Binary Tree: helper returns height; outer shared variable tracks global maximum. Here helper returns target count; outer shared variable tracks LCA.
+
+
+## Updated solution — Your latest counting approach (cleaned up)
+
+Your latest code uses `ans` to remember the **first bottom-up node** whose subtree contains both targets. The existing explanation above covers this same counting strategy; this section preserves your latest variable names and simplifies null handling.
+
+```javascript
+var lowestCommonAncestor = function(root, p, q) {
+    let ans = null;
+
+    function findLCA(curr) {
+        if (!curr) return 0;
+
+        // Number of target nodes found in each subtree.
+        let leftCount = findLCA(curr.left);
+        let rightCount = findLCA(curr.right);
+
+        // Count current node if it is one of the targets.
+        let count = leftCount + rightCount;
+        if (curr === p || curr === q) count++;
+
+        // First node found bottom-up with both targets is LCA.
+        if (count === 2 && !ans) ans = curr;
+
+        return count;
+    }
+
+    findLCA(root);
+    return ans;
+};
+```
+
+**Notes:** Comparing references (`curr === p`) is robust beyond the unique-value constraint. Calling `findLCA(null)` directly returns numeric 0, unlike `curr.left && findLCA(curr.left)`, which yields null and relies on numeric coercion. Store `curr`, not `curr.val`, because the problem returns a TreeNode.
+
+**Approach:** Bottom-Up DFS; **time:** O(n), **recursion space:** O(h). This is an updated version of the existing approach, **not a new unique solved problem**.
