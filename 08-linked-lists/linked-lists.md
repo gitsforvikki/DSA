@@ -11,11 +11,11 @@ Solve one question at a time. **Solutions are hidden in separate files when adde
 | [ ] | 3 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy |
 | [ ] | 4 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | Easy |
 | [ ] | 5 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium |
-| [ ] | 6 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy |
+| [x] | 6 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy |
 | [ ] | 7 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | Medium |
 | [ ] | 8 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy |
-| [ ] | 9 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) · [Solution + graphics](solutions/21-merge-two-sorted-lists.md) | Easy |
-| [ ] | 10 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy |
+| [x] | 9 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) · [Solution + graphics](solutions/21-merge-two-sorted-lists.md) | Easy |
+| [x] | 10 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy |
 | [ ] | 11 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Medium |
 | [ ] | 12 | [Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Easy |
 | [ ] | 13 | [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) | Medium |
@@ -24,7 +24,7 @@ Solve one question at a time. **Solutions are hidden in separate files when adde
 | [ ] | 16 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium |
 | [ ] | 17 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Medium |
 | [x] | 18 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) · [My solution + explanation + graphics](solutions/2-add-two-numbers.md) | Medium |
-| [ ] | 19 | [Rotate List](https://leetcode.com/problems/rotate-list/) · [My solution + hints + graphics](solutions/61-rotate-list.md) | Medium |
+| [x] | 19 | [Rotate List](https://leetcode.com/problems/rotate-list/) · [My solution + hints + graphics](solutions/61-rotate-list.md) | Medium |
 | [ ] | 20 | [Partition List](https://leetcode.com/problems/partition-list/) | Medium |
 | [ ] | 21 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | Medium |
 | [ ] | 22 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium |
