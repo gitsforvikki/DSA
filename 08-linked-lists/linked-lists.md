@@ -7,7 +7,7 @@ Solve one question at a time. **Solutions are hidden in separate files when adde
 | Done | # | Question | Difficulty |
 |---|---:|---|--- |
 | [ ] | 1 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy |
-| [ ] | 2 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Easy |
+| [x] | 2 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) · [My solution + explanation](solutions/876-middle-of-linked-list.md) | Easy |
 | [ ] | 3 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy |
 | [ ] | 4 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | Easy |
 | [ ] | 5 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium |
